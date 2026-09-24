@@ -182,6 +182,13 @@
       "path": "assets/tokens/spaceport-6-3d7e644031.png",
       "width": 118,
       "height": 118
+    },
+    {
+      "title": "Action tile 7",
+      "figmaId": "229:13799",
+      "path": "assets/tokens/action-tile-7-7d3d7a7703.png",
+      "width": 213,
+      "height": 213
     }
   ]
 }

@@ -10,7 +10,7 @@ Current export:
 | Objectives | 30 | 6 | 5 | Objective card back |
 | Specials | 16 | 4 | 4 | Special Card back |
 
-There are also 3 boards, 2 standalone guide cards, and 12 tokens. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS.
+There are also 3 boards, 2 standalone guide cards, and 13 tokens. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS.
 
 ## Refreshing the exports
 

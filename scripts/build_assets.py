@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from pathlib import Path
 
 from PIL import Image
@@ -115,12 +116,19 @@ def main() -> None:
             catalog["tokens"].append({"title": f"{title_prefix} {number}",
                                       "figmaId": ids[number - 1],
                                       **publish(load(slug), "tokens", slug)})
+    catalog["tokens"].append({"title": "Action tile 7", "figmaId": "229:13799",
+                              **publish(load("action-tile-7"), "tokens", "action-tile-7")})
 
     manifest = json.dumps(catalog, indent=2, ensure_ascii=False)
     (DOCS / "catalog.json").write_text(manifest + "\n", encoding="utf-8")
     (DOCS / "catalog.js").write_text("window.FRONTIER_CATALOG = " +
                                       json.dumps(catalog, ensure_ascii=False) + ";\n",
                                       encoding="utf-8")
+    index = DOCS / "index.html"
+    version = hashlib.sha256(manifest.encode("utf-8")).hexdigest()[:10]
+    html = index.read_text(encoding="utf-8")
+    html = re.sub(r'catalog\.js\?v=[^" ]+', f'catalog.js?v={version}', html)
+    index.write_text(html, encoding="utf-8")
     print(f"Built {len(catalog['decks'])} decks, {len(catalog['boards'])} boards, "
           f"{len(catalog['cards'])} cards, {len(catalog['tokens'])} tokens")
 
