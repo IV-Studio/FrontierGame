@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12171c">
+  <title>Frontier · Tabletop Simulator assets</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="catalog.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">F</span><span>FRONTIER</span></div>
+      <span class="header-tag">Tabletop Simulator assets</span>
+    </div>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">GAME COMPONENTS</p>
+        <h1 id="page-title">Ready for the table.</h1>
+        <p class="intro-copy">Copy a direct image URL and paste it into Tabletop Simulator. Decks include the exact import settings beside each sheet.</p>
+      </div>
+      <div class="summary" id="summary" aria-label="Asset summary"></div>
+    </section>
+    <div class="notice" id="local-notice" hidden>This is a local preview. Direct URLs become available when the site is published on GitHub Pages.</div>
+    <nav class="section-nav" aria-label="Asset categories">
+      <a href="#decks">Decks</a><a href="#boards">Boards</a><a href="#cards">Cards</a><a href="#tokens">Tokens</a>
+    </nav>
+    <section class="asset-section" id="decks" aria-labelledby="decks-title">
+      <div class="section-head"><div><p class="eyebrow">01 / CARD SHEETS</p><h2 id="decks-title">Decks</h2></div><p>Use the face and back URLs for a Custom Deck. Set Width, Height, and Number to the values shown.</p></div>
+      <div id="deck-list" class="deck-list"></div>
+    </section>
+    <section class="asset-section" id="boards" aria-labelledby="boards-title">
+      <div class="section-head"><div><p class="eyebrow">02 / PLAY SURFACES</p><h2 id="boards-title">Boards</h2></div><p>Paste an image URL into a Custom Board.</p></div>
+      <div id="board-list" class="asset-grid"></div>
+    </section>
+    <section class="asset-section" id="cards" aria-labelledby="cards-title">
+      <div class="section-head"><div><p class="eyebrow">03 / INDIVIDUAL CARDS</p><h2 id="cards-title">Cards</h2></div><p>These are standalone card images.</p></div>
+      <div id="card-list" class="asset-grid"></div>
+    </section>
+    <section class="asset-section" id="tokens" aria-labelledby="tokens-title">
+      <div class="section-head"><div><p class="eyebrow">04 / PLAY PIECES</p><h2 id="tokens-title">Tokens</h2></div><p>Each action tile and spaceport has its own image URL.</p></div>
+      <div id="token-list" class="asset-grid token-grid"></div>
+    </section>
+  </main>
+  <footer><span>Frontier · Game components</span><span>Source artwork: <a href="https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=218-13798" target="_blank" rel="noopener">Figma slice ↗</a></span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
