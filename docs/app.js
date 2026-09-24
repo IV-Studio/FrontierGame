@@ -18,21 +18,15 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => node.classList.remove('show'), 2200);
   };
-  async function copy(text) {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      const input = el('textarea');
-      input.value = text;
-      input.style.position = 'fixed';
-      input.style.opacity = '0';
-      document.body.append(input);
-      input.select();
-      const ok = document.execCommand('copy');
-      input.remove();
-      if (!ok) { toast('Select and copy the URL field'); return; }
+  async function copy(input) {
+    input.focus();
+    input.select();
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch {}
+    if (!copied) {
+      try { await navigator.clipboard.writeText(input.value); copied = true; } catch {}
     }
-    toast('URL copied');
+    toast(copied ? 'URL selected. If paste is empty, press Ctrl+C.' : 'URL selected. Press Ctrl+C to copy.');
   }
   function urlRow(label, asset) {
     const row = el('div', 'url-row');
@@ -50,7 +44,7 @@
     button.type = 'button';
     button.disabled = local;
     button.setAttribute('aria-label', `Copy ${label.toLowerCase()} URL`);
-    button.addEventListener('click', () => copy(urlFor(asset)));
+    button.addEventListener('click', () => copy(input));
     controls.append(input, button);
     row.append(labelNode, controls);
     return row;
