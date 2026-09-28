@@ -4,7 +4,7 @@
     {
       "title": "Main board",
       "figmaId": "206:12165",
-      "path": "assets/boards/board-main-534e7e9e72.png",
+      "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 3394,
       "height": 2761
     },
@@ -27,16 +27,25 @@
     {
       "title": "Action Guide",
       "figmaId": "193:5684",
-      "path": "assets/cards/card-action-guide-7c4e519c1d.png",
+      "path": "assets/cards/card-action-guide-6323e6fee4.png",
       "width": 506,
       "height": 729
     },
     {
       "title": "Region Bonus Guide",
       "figmaId": "193:5730",
-      "path": "assets/cards/card-region-bonus-guide-32b65de650.png",
+      "path": "assets/cards/card-region-bonus-guide-800eb32bd9.png",
       "width": 506,
       "height": 732
+    }
+  ],
+  "references": [
+    {
+      "title": "Board locations · regions and circle icons",
+      "figmaId": "242:3938",
+      "path": "assets/references/board-locations-dbe7a4fe3e.png",
+      "width": 920,
+      "height": 1256
     }
   ],
   "decks": [
@@ -49,7 +58,7 @@
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
-        "path": "assets/decks/monuments-faces-0f3e4fe6ec.png",
+        "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 3536,
         "height": 2560
       },
@@ -68,7 +77,7 @@
       "cardWidth": 388,
       "cardHeight": 519,
       "face": {
-        "path": "assets/decks/objectives-faces-4e573d4438.png",
+        "path": "assets/decks/objectives-faces-4d91a50427.png",
         "width": 2328,
         "height": 2595
       },
@@ -87,12 +96,12 @@
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
-        "path": "assets/decks/specials-faces-320e54481c.png",
+        "path": "assets/decks/specials-faces-adc1172863.png",
         "width": 1768,
         "height": 2560
       },
       "back": {
-        "path": "assets/decks/specials-back-3437691a5d.png",
+        "path": "assets/decks/specials-back-0b946676e3.png",
         "width": 442,
         "height": 640
       }

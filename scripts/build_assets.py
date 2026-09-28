@@ -69,7 +69,7 @@ def sheet(name: str, count: int, source_columns: int, origin: tuple[int, int],
 def main() -> None:
     DOCS.mkdir(exist_ok=True)
     catalog = {"source": "Figma Game components slice 218:13798", "boards": [],
-               "cards": [], "decks": [], "tokens": []}
+               "cards": [], "references": [], "decks": [], "tokens": []}
 
     for slug, title, figma_id in [
         ("board-main", "Main board", "206:12165"),
@@ -85,6 +85,12 @@ def main() -> None:
     ]:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
+
+    catalog["references"].append({
+        "title": "Board locations · regions and circle icons",
+        "figmaId": "242:3938",
+        **publish(load("board-locations"), "references", "board-locations"),
+    })
 
     deck_specs = [
         ("monuments", "Monuments", "216:4802", 32, 6, (0, 0), (482, 680),
@@ -130,7 +136,8 @@ def main() -> None:
     html = re.sub(r'catalog\.js\?v=[^" ]+', f'catalog.js?v={version}', html)
     index.write_text(html, encoding="utf-8")
     print(f"Built {len(catalog['decks'])} decks, {len(catalog['boards'])} boards, "
-          f"{len(catalog['cards'])} cards, {len(catalog['tokens'])} tokens")
+          f"{len(catalog['cards'])} cards, {len(catalog['references'])} references, "
+          f"{len(catalog['tokens'])} tokens")
 
 
 if __name__ == "__main__":

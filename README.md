@@ -10,11 +10,11 @@ Current export:
 | Objectives | 30 | 6 | 5 | Objective card back |
 | Specials | 16 | 4 | 4 | Special Card back |
 
-There are also 3 boards, 2 standalone guide cards, and 13 tokens. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS.
+There are also 3 boards, 2 standalone guide cards, a location reference table, and 13 tokens. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS.
 
 ## Refreshing the exports
 
-1. Render the current contents of the Figma slice into `tmp/figma-export/`. Export grouped card frames at their natural size with no page overlays; export each board, back, guide, and token individually. The Figma node IDs and names are recorded in `docs/catalog.json`.
+1. Render the current contents of the Figma slice into `tmp/figma-export/`. Export grouped card frames at their natural size with no page overlays; export each board, back, guide, token, and the location table individually. The Figma node IDs and names are recorded in `docs/catalog.json`.
 2. Run `scripts/build_assets.py` with Python and Pillow. This packs the card groups, copies individual assets, and regenerates `docs/catalog.json` and `docs/catalog.js`.
 3. Review the deck previews and counts, then commit and push `docs/` to GitHub. GitHub Pages serves the landing page and image files.
 
