@@ -2,8 +2,9 @@
   const catalog = window.FRONTIER_CATALOG;
   if (!catalog) return;
   const local = location.protocol === 'file:';
+  const publishedBase = 'https://iv-studio.github.io/FrontierGame/';
   if (local) document.getElementById('local-notice').hidden = false;
-  const urlFor = asset => new URL(asset.path, document.baseURI).href;
+  const urlFor = asset => new URL(asset.path, local ? publishedBase : document.baseURI).href;
   const el = (tag, className, text) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -38,11 +39,10 @@
     input.id = id;
     input.type = 'text';
     input.readOnly = true;
-    input.value = local ? 'Available after publishing' : urlFor(asset);
+    input.value = urlFor(asset);
     input.addEventListener('focus', () => input.select());
     const button = el('button', 'copy-btn', 'Copy');
     button.type = 'button';
-    button.disabled = local;
     button.setAttribute('aria-label', `Copy ${label.toLowerCase()} URL`);
     button.addEventListener('click', () => copy(input));
     controls.append(input, button);
