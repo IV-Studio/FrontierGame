@@ -100,13 +100,14 @@ def load(name: str) -> Image.Image:
 
 def sheet(name: str, count: int, source_columns: int, origin: tuple[int, int],
           stride: tuple[int, int], card_size: tuple[int, int],
-          columns: int, rows: int) -> dict:
+          columns: int, rows: int, start: int = 0) -> dict:
     image = load(name)
     mode = "RGBA" if "A" in image.getbands() else "RGB"
     result = Image.new(mode, (columns * card_size[0], rows * card_size[1]))
     for index in range(count):
-        source_col = index % source_columns
-        source_row = index // source_columns
+        source_index = start + index
+        source_col = source_index % source_columns
+        source_row = source_index // source_columns
         x = origin[0] + source_col * stride[0]
         y = origin[1] + source_row * stride[1]
         box = (x, y, x + card_size[0], y + card_size[1])
@@ -147,23 +148,25 @@ def main() -> None:
     })
 
     deck_specs = [
-        ("monuments", "Monuments", "216:4802", 32, 6, (0, 0), (482, 680),
-         (442, 640), 8, 4, "back-monument"),
-        ("objectives", "Objectives", "193:5755", 30, 6, (196, 140), (420, 551),
-         (388, 519), 6, 5, "back-objective"),
-        ("specials", "Specials", "220:3842", 16, 5, (0, 0), (482, 680),
-         (442, 640), 4, 4, "back-special"),
+        ("monuments", "monuments", "Monuments", "216:4802", 32, 6, (0, 0), (482, 680),
+         (442, 640), 8, 4, "back-monument", 0),
+        ("monuments", "monument-33", "Monument 33", "216:6008", 1, 6, (0, 0), (482, 680),
+         (442, 640), 1, 1, "back-monument", 32),
+        ("objectives", "objectives", "Objectives", "193:5755", 30, 6, (196, 140), (420, 551),
+         (388, 519), 6, 5, "back-objective", 0),
+        ("specials", "specials", "Specials", "220:3842", 16, 5, (0, 0), (482, 680),
+         (442, 640), 4, 4, "back-special", 0),
     ]
-    for (slug, title, figma_id, count, source_columns, origin, stride,
-         card_size, columns, rows, back_slug) in deck_specs:
+    for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
+         card_size, columns, rows, back_slug, start) in deck_specs:
         packed = sheet(slug, count, source_columns, origin, stride,
-                       card_size, columns, rows)
-        face = publish(packed.pop("image"), "decks", f"{slug}-faces")
+                       card_size, columns, rows, start)
+        face = publish(packed.pop("image"), "decks", f"{asset_slug}-faces")
         back = load(back_slug)
         if back.size != card_size:
             # TTS applies the same card geometry to both sides.
             back = back.resize(card_size, Image.Resampling.LANCZOS)
-        back_asset = publish(back, "decks", f"{slug}-back")
+        back_asset = publish(back, "decks", f"{asset_slug}-back")
         catalog["decks"].append({"title": title, "figmaId": figma_id,
                                   **packed, "face": face, "back": back_asset})
 

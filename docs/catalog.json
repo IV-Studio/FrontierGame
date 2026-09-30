@@ -69,6 +69,25 @@
       }
     },
     {
+      "title": "Monument 33",
+      "figmaId": "216:6008",
+      "count": 1,
+      "columns": 1,
+      "rows": 1,
+      "cardWidth": 442,
+      "cardHeight": 640,
+      "face": {
+        "path": "assets/decks/monument-33-faces.png",
+        "width": 442,
+        "height": 640
+      },
+      "back": {
+        "path": "assets/decks/monument-33-back.png",
+        "width": 442,
+        "height": 640
+      }
+    },
+    {
       "title": "Objectives",
       "figmaId": "193:5755",
       "count": 30,
