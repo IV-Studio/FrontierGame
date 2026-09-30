@@ -14,13 +14,6 @@
       "path": "assets/boards/board-edge-4a245f7e45.png",
       "width": 1536,
       "height": 1024
-    },
-    {
-      "title": "Space Ports",
-      "figmaId": "207:12484",
-      "path": "assets/boards/board-space-ports-e3b3754e2d.png",
-      "width": 1536,
-      "height": 1024
     }
   ],
   "cards": [
@@ -39,50 +32,23 @@
       "height": 732
     }
   ],
-  "references": [
-    {
-      "title": "Board locations · regions and circle icons",
-      "figmaId": "242:3938",
-      "path": "assets/references/board-locations-dbe7a4fe3e.png",
-      "width": 920,
-      "height": 1256
-    }
-  ],
+  "references": [],
   "decks": [
     {
       "title": "Monuments",
       "figmaId": "216:4802",
-      "count": 32,
+      "count": 33,
       "columns": 8,
-      "rows": 4,
+      "rows": 5,
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 3536,
-        "height": 2560
+        "height": 3200
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
-        "width": 442,
-        "height": 640
-      }
-    },
-    {
-      "title": "Monument 33",
-      "figmaId": "216:6008",
-      "count": 1,
-      "columns": 1,
-      "rows": 1,
-      "cardWidth": 442,
-      "cardHeight": 640,
-      "face": {
-        "path": "assets/decks/monument-33-faces.png",
-        "width": 442,
-        "height": 640
-      },
-      "back": {
-        "path": "assets/decks/monument-33-back.png",
         "width": 442,
         "height": 640
       }
@@ -135,13 +101,6 @@
       "height": 213
     },
     {
-      "title": "Spaceport 1",
-      "figmaId": "193:6028",
-      "path": "assets/tokens/spaceport-1-302a9c004a.png",
-      "width": 118,
-      "height": 118
-    },
-    {
       "title": "Action tile 2",
       "figmaId": "193:5672",
       "path": "assets/tokens/action-tile-2-7107aa55c8.png",
@@ -149,25 +108,11 @@
       "height": 213
     },
     {
-      "title": "Spaceport 2",
-      "figmaId": "193:6033",
-      "path": "assets/tokens/spaceport-2-fd529145f4.png",
-      "width": 118,
-      "height": 118
-    },
-    {
       "title": "Action tile 3",
-      "figmaId": "193:5675",
+      "figmaId": "253:3964",
       "path": "assets/tokens/action-tile-3-ef94b504ad.png",
       "width": 213,
       "height": 213
-    },
-    {
-      "title": "Spaceport 3",
-      "figmaId": "193:6038",
-      "path": "assets/tokens/spaceport-3-d3dafc6275.png",
-      "width": 118,
-      "height": 118
     },
     {
       "title": "Action tile 4",
@@ -177,13 +122,6 @@
       "height": 213
     },
     {
-      "title": "Spaceport 4",
-      "figmaId": "193:6048",
-      "path": "assets/tokens/spaceport-4-34415a9bdb.png",
-      "width": 118,
-      "height": 118
-    },
-    {
       "title": "Action tile 5",
       "figmaId": "193:5660",
       "path": "assets/tokens/action-tile-5-39a0ec00fc.png",
@@ -191,25 +129,11 @@
       "height": 213
     },
     {
-      "title": "Spaceport 5",
-      "figmaId": "193:6043",
-      "path": "assets/tokens/spaceport-5-aac305d707.png",
-      "width": 118,
-      "height": 118
-    },
-    {
       "title": "Action tile 6",
       "figmaId": "193:5669",
       "path": "assets/tokens/action-tile-6-813e8438d5.png",
       "width": 213,
       "height": 213
-    },
-    {
-      "title": "Spaceport 6",
-      "figmaId": "193:6053",
-      "path": "assets/tokens/spaceport-6-3d7e644031.png",
-      "width": 118,
-      "height": 118
     },
     {
       "title": "Action tile 7",

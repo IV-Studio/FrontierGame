@@ -86,13 +86,12 @@
   }
   for (const deck of catalog.decks) document.getElementById('deck-list').append(renderDeck(deck));
   for (const [key, target] of [['boards', 'board-list'], ['cards', 'card-list'],
-                               ['references', 'reference-list'], ['tokens', 'token-list']]) {
+                               ['tokens', 'token-list']]) {
     for (const asset of catalog[key]) document.getElementById(target).append(renderSingle(asset));
   }
   const summary = document.getElementById('summary');
   for (const [value, label] of [[catalog.decks.length, 'Decks'], [catalog.boards.length, 'Boards'],
-                                 [catalog.cards.length, 'Single cards'], [catalog.references.length, 'References'],
-                                 [catalog.tokens.length, 'Tokens']]) {
+                                 [catalog.cards.length, 'Single cards'], [catalog.tokens.length, 'Tokens']]) {
     const item = el('div', 'summary-item');
     item.append(el('strong', '', String(value)), el('span', '', label));
     summary.append(item);

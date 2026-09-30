@@ -129,7 +129,6 @@ def main() -> None:
     for slug, title, figma_id in [
         ("board-main", "Main board", "206:12165"),
         ("board-edge", "The Edge", "207:12552"),
-        ("board-space-ports", "Space Ports", "207:12484"),
     ]:
         catalog["boards"].append({"title": title, "figmaId": figma_id,
                                    **publish(load(slug), "boards", slug)})
@@ -141,17 +140,9 @@ def main() -> None:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
 
-    catalog["references"].append({
-        "title": "Board locations · regions and circle icons",
-        "figmaId": "242:3938",
-        **publish(load("board-locations"), "references", "board-locations"),
-    })
-
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "216:4802", 32, 6, (0, 0), (482, 680),
-         (442, 640), 8, 4, "back-monument", 0),
-        ("monuments", "monument-33", "Monument 33", "216:6008", 1, 6, (0, 0), (482, 680),
-         (442, 640), 1, 1, "back-monument", 32),
+        ("monuments", "monuments", "Monuments", "216:4802", 33, 6, (0, 0), (482, 680),
+         (442, 640), 8, 5, "back-monument", 0),
         ("objectives", "objectives", "Objectives", "193:5755", 30, 6, (196, 140), (420, 551),
          (388, 519), 6, 5, "back-objective", 0),
         ("specials", "specials", "Specials", "220:3842", 16, 5, (0, 0), (482, 680),
@@ -170,17 +161,18 @@ def main() -> None:
         catalog["decks"].append({"title": title, "figmaId": figma_id,
                                   **packed, "face": face, "back": back_asset})
 
-    for number in range(1, 7):
-        for slug_prefix, title_prefix, ids in [
-            ("action-tile", "Action tile", ["193:5655", "193:5672", "193:5675", "193:5678", "193:5660", "193:5669"]),
-            ("spaceport", "Spaceport", ["193:6028", "193:6033", "193:6038", "193:6048", "193:6043", "193:6053"]),
-        ]:
-            slug = f"{slug_prefix}-{number}"
-            catalog["tokens"].append({"title": f"{title_prefix} {number}",
-                                      "figmaId": ids[number - 1],
-                                      **publish(load(slug), "tokens", slug)})
-    catalog["tokens"].append({"title": "Action tile 7", "figmaId": "229:13799",
-                              **publish(load("action-tile-7"), "tokens", "action-tile-7")})
+    # Keep the previously issued single-card URL current, even though card 33
+    # now appears in the main Monument sheet.
+    extra = sheet("monuments", 1, 6, (0, 0), (482, 680), (442, 640), 1, 1, 32)
+    publish(extra["image"], "decks", "monument-33-faces")
+
+    action_tile_ids = ["193:5655", "193:5672", "253:3964", "193:5678",
+                       "193:5660", "193:5669", "229:13799"]
+    for number, figma_id in enumerate(action_tile_ids, start=1):
+        slug = f"action-tile-{number}"
+        catalog["tokens"].append({"title": f"Action tile {number}",
+                                  "figmaId": figma_id,
+                                  **publish(load(slug), "tokens", slug)})
 
     manifest = json.dumps(catalog, indent=2, ensure_ascii=False)
     (DOCS / "catalog.json").write_text(manifest + "\n", encoding="utf-8")
