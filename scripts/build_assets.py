@@ -161,8 +161,7 @@ def main() -> None:
         catalog["decks"].append({"title": title, "figmaId": figma_id,
                                   **packed, "face": face, "back": back_asset})
 
-    # Page 3 has no ActionTile3 and contains two distinct ActionTile7 frames.
-    # Keep the original tile 7 URL on the upper-row design for existing TTS links.
+    # Page 3 has no ActionTile3. The second former ActionTile7 is now ActionTile11.
     action_tiles = [
         ("action-tile-1", "Action tile 1", "282:1158"),
         ("action-tile-2", "Action tile 2", "282:1180"),
@@ -170,15 +169,18 @@ def main() -> None:
         ("action-tile-5", "Action tile 5", "282:1168"),
         ("action-tile-6", "Action tile 6", "282:1177"),
         ("action-tile-7", "Action tile 7", "282:1163"),
-        ("action-tile-7-variant", "Action tile 7 (second design)", "282:2931"),
         ("action-tile-8", "Action tile 8", "282:2939"),
         ("action-tile-9", "Action tile 9", "282:3841"),
         ("action-tile-10", "Action tile 10", "282:3837"),
+        ("action-tile-11", "Action tile 11", "282:2931"),
     ]
     for slug, title, figma_id in action_tiles:
         catalog["tokens"].append({"title": title,
                                   "figmaId": figma_id,
                                   **publish(load(slug), "tokens", slug)})
+
+    # The former second-design URL may already be linked in TTS.
+    publish(load("action-tile-11"), "tokens", "action-tile-7-variant")
 
     manifest = json.dumps(catalog, indent=2, ensure_ascii=False)
     (DOCS / "catalog.json").write_text(manifest + "\n", encoding="utf-8")

@@ -136,13 +136,6 @@
       "height": 213
     },
     {
-      "title": "Action tile 7 (second design)",
-      "figmaId": "282:2931",
-      "path": "assets/tokens/action-tile-7-variant.png",
-      "width": 213,
-      "height": 213
-    },
-    {
       "title": "Action tile 8",
       "figmaId": "282:2939",
       "path": "assets/tokens/action-tile-8.png",
@@ -160,6 +153,13 @@
       "title": "Action tile 10",
       "figmaId": "282:3837",
       "path": "assets/tokens/action-tile-10.png",
+      "width": 213,
+      "height": 213
+    },
+    {
+      "title": "Action tile 11",
+      "figmaId": "282:2931",
+      "path": "assets/tokens/action-tile-11.png",
       "width": 213,
       "height": 213
     }
