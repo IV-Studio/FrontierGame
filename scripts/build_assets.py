@@ -123,29 +123,29 @@ def sheet(name: str, count: int, source_columns: int, origin: tuple[int, int],
 def main() -> None:
     DOCS.mkdir(exist_ok=True)
     publish = Publisher()
-    catalog = {"source": "Figma Game components slice 218:13798", "boards": [],
+    catalog = {"source": "Figma Page 3 Game components slice 282:2815", "boards": [],
                "cards": [], "references": [], "decks": [], "tokens": []}
 
     for slug, title, figma_id in [
-        ("board-main", "Main board", "206:12165"),
-        ("board-edge", "The Edge", "207:12552"),
+        ("board-main", "Main board", "282:1521"),
+        ("board-edge", "The Edge", "282:1845"),
     ]:
         catalog["boards"].append({"title": title, "figmaId": figma_id,
                                    **publish(load(slug), "boards", slug)})
 
     for slug, title, figma_id in [
-        ("card-action-guide", "Action Guide", "193:5684"),
-        ("card-region-bonus-guide", "Region Bonus Guide", "193:5730"),
+        ("card-action-guide", "Action Guide", "282:1189"),
+        ("card-region-bonus-guide", "Region Bonus Guide", "282:1230"),
     ]:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
 
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "216:4802", 33, 6, (0, 0), (482, 680),
-         (442, 640), 8, 5, "back-monument", 0),
-        ("objectives", "objectives", "Objectives", "193:5755", 30, 6, (196, 140), (420, 551),
+        ("monuments", "monuments", "Monuments", "282:1897", 30, 6, (0, 0), (482, 680),
+         (442, 640), 8, 4, "back-monument", 0),
+        ("objectives", "objectives", "Objectives", "282:1252", 30, 6, (196, 140), (420, 551),
          (388, 519), 6, 5, "back-objective", 0),
-        ("specials", "specials", "Specials", "220:3842", 16, 5, (0, 0), (482, 680),
+        ("specials", "specials", "Specials", "282:2715", 16, 4, (0, 0), (482, 680),
          (442, 640), 4, 4, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
@@ -161,16 +161,22 @@ def main() -> None:
         catalog["decks"].append({"title": title, "figmaId": figma_id,
                                   **packed, "face": face, "back": back_asset})
 
-    # Keep the previously issued single-card URL current, even though card 33
-    # now appears in the main Monument sheet.
-    extra = sheet("monuments", 1, 6, (0, 0), (482, 680), (442, 640), 1, 1, 32)
-    publish(extra["image"], "decks", "monument-33-faces")
-
-    action_tile_ids = ["193:5655", "193:5672", "253:3964", "193:5678",
-                       "193:5660", "193:5669", "229:13799"]
-    for number, figma_id in enumerate(action_tile_ids, start=1):
-        slug = f"action-tile-{number}"
-        catalog["tokens"].append({"title": f"Action tile {number}",
+    # Page 3 has no ActionTile3 and contains two distinct ActionTile7 frames.
+    # Keep the original tile 7 URL on the upper-row design for existing TTS links.
+    action_tiles = [
+        ("action-tile-1", "Action tile 1", "282:1158"),
+        ("action-tile-2", "Action tile 2", "282:1180"),
+        ("action-tile-4", "Action tile 4", "282:1183"),
+        ("action-tile-5", "Action tile 5", "282:1168"),
+        ("action-tile-6", "Action tile 6", "282:1177"),
+        ("action-tile-7", "Action tile 7", "282:1163"),
+        ("action-tile-7-variant", "Action tile 7 (second design)", "282:2931"),
+        ("action-tile-8", "Action tile 8", "282:2939"),
+        ("action-tile-9", "Action tile 9", "282:3841"),
+        ("action-tile-10", "Action tile 10", "282:3837"),
+    ]
+    for slug, title, figma_id in action_tiles:
+        catalog["tokens"].append({"title": title,
                                   "figmaId": figma_id,
                                   **publish(load(slug), "tokens", slug)})
 
