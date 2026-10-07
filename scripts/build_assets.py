@@ -141,12 +141,12 @@ def main() -> None:
                                   **publish(load(slug), "cards", slug)})
 
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "282:1897", 30, 6, (0, 0), (482, 680),
-         (442, 640), 8, 4, "back-monument", 0),
+        ("monuments", "monuments", "Monuments", "282:1897", 27, 6, (0, 0), (482, 680),
+         (442, 640), 7, 4, "back-monument", 0),
         ("objectives", "objectives", "Objectives", "282:1252", 30, 6, (196, 140), (420, 551),
          (388, 519), 6, 5, "back-objective", 0),
-        ("specials", "specials", "Specials", "282:2715", 16, 4, (0, 0), (482, 680),
-         (442, 640), 4, 4, "back-special", 0),
+        ("specials", "specials", "Specials", "282:2715", 22, 4, (0, 0), (482, 680),
+         (442, 640), 6, 4, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
          card_size, columns, rows, back_slug, start) in deck_specs:
@@ -161,18 +161,19 @@ def main() -> None:
         catalog["decks"].append({"title": title, "figmaId": figma_id,
                                   **packed, "face": face, "back": back_asset})
 
-    # Page 3 has no ActionTile3. The second former ActionTile7 is now ActionTile11.
     action_tiles = [
         ("action-tile-1", "Action tile 1", "282:1158"),
         ("action-tile-2", "Action tile 2", "282:1180"),
-        ("action-tile-4", "Action tile 4", "282:1183"),
-        ("action-tile-5", "Action tile 5", "282:1168"),
-        ("action-tile-6", "Action tile 6", "282:1177"),
+        ("action-tile-3", "Action tile 3", "305:906"),
+        ("action-tile-4", "Action tile 4", "305:924"),
+        ("action-tile-5", "Action tile 5", "282:1177"),
+        ("action-tile-6", "Action tile 6", "305:912"),
         ("action-tile-7", "Action tile 7", "282:1163"),
-        ("action-tile-8", "Action tile 8", "282:2939"),
+        ("action-tile-8", "Action tile 8", "305:930"),
         ("action-tile-9", "Action tile 9", "282:3841"),
-        ("action-tile-10", "Action tile 10", "282:3837"),
+        ("action-tile-10", "Action tile 10", "305:915"),
         ("action-tile-11", "Action tile 11", "282:2931"),
+        ("action-tile-12", "Action tile 12", "305:933"),
     ]
     for slug, title, figma_id in action_tiles:
         catalog["tokens"].append({"title": title,

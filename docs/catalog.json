@@ -37,14 +37,14 @@
     {
       "title": "Monuments",
       "figmaId": "282:1897",
-      "count": 30,
-      "columns": 8,
+      "count": 27,
+      "columns": 7,
       "rows": 4,
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
-        "width": 3536,
+        "width": 3094,
         "height": 2560
       },
       "back": {
@@ -75,14 +75,14 @@
     {
       "title": "Specials",
       "figmaId": "282:2715",
-      "count": 16,
-      "columns": 4,
+      "count": 22,
+      "columns": 6,
       "rows": 4,
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
         "path": "assets/decks/specials-faces-adc1172863.png",
-        "width": 1768,
+        "width": 2652,
         "height": 2560
       },
       "back": {
@@ -108,22 +108,29 @@
       "height": 213
     },
     {
+      "title": "Action tile 3",
+      "figmaId": "305:906",
+      "path": "assets/tokens/action-tile-3.png",
+      "width": 213,
+      "height": 213
+    },
+    {
       "title": "Action tile 4",
-      "figmaId": "282:1183",
+      "figmaId": "305:924",
       "path": "assets/tokens/action-tile-4-21af0fce2d.png",
       "width": 213,
       "height": 213
     },
     {
       "title": "Action tile 5",
-      "figmaId": "282:1168",
+      "figmaId": "282:1177",
       "path": "assets/tokens/action-tile-5-39a0ec00fc.png",
       "width": 213,
       "height": 213
     },
     {
       "title": "Action tile 6",
-      "figmaId": "282:1177",
+      "figmaId": "305:912",
       "path": "assets/tokens/action-tile-6-813e8438d5.png",
       "width": 213,
       "height": 213
@@ -137,7 +144,7 @@
     },
     {
       "title": "Action tile 8",
-      "figmaId": "282:2939",
+      "figmaId": "305:930",
       "path": "assets/tokens/action-tile-8.png",
       "width": 213,
       "height": 213
@@ -151,7 +158,7 @@
     },
     {
       "title": "Action tile 10",
-      "figmaId": "282:3837",
+      "figmaId": "305:915",
       "path": "assets/tokens/action-tile-10.png",
       "width": 213,
       "height": 213
@@ -160,6 +167,13 @@
       "title": "Action tile 11",
       "figmaId": "282:2931",
       "path": "assets/tokens/action-tile-11.png",
+      "width": 213,
+      "height": 213
+    },
+    {
+      "title": "Action tile 12",
+      "figmaId": "305:933",
+      "path": "assets/tokens/action-tile-12.png",
       "width": 213,
       "height": 213
     }
