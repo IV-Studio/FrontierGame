@@ -51,7 +51,7 @@
   }
   function image(asset, title) {
     const img = el('img');
-    img.src = asset.path;
+    img.src = asset.revision ? `${asset.path}?v=${asset.revision}` : asset.path;
     img.alt = title;
     img.loading = 'lazy';
     img.decoding = 'async';

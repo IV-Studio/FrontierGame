@@ -88,7 +88,8 @@ class Publisher:
                 temp_path.unlink(missing_ok=True)
 
         return {"path": f"assets/{category}/{filename}",
-                "width": image.width, "height": image.height}
+                "width": image.width, "height": image.height,
+                "revision": hashlib.sha256(data).hexdigest()[:10]}
 
 
 def load(name: str) -> Image.Image:

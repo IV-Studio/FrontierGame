@@ -6,14 +6,16 @@
       "figmaId": "282:1521",
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 3394,
-      "height": 2761
+      "height": 2761,
+      "revision": "c1db2b9277"
     },
     {
       "title": "The Edge",
       "figmaId": "282:1845",
       "path": "assets/boards/board-edge-4a245f7e45.png",
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "revision": "ca75a35f3d"
     }
   ],
   "cards": [
@@ -22,14 +24,16 @@
       "figmaId": "282:1189",
       "path": "assets/cards/card-action-guide-6323e6fee4.png",
       "width": 506,
-      "height": 729
+      "height": 729,
+      "revision": "7b222e6a85"
     },
     {
       "title": "Region Bonus Guide",
       "figmaId": "282:1230",
       "path": "assets/cards/card-region-bonus-guide-800eb32bd9.png",
       "width": 506,
-      "height": 732
+      "height": 732,
+      "revision": "16ba4993bc"
     }
   ],
   "references": [],
@@ -45,12 +49,14 @@
       "face": {
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 3094,
-        "height": 2560
+        "height": 2560,
+        "revision": "2632d36ba0"
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
         "width": 442,
-        "height": 640
+        "height": 640,
+        "revision": "1edb39b7f6"
       }
     },
     {
@@ -64,12 +70,14 @@
       "face": {
         "path": "assets/decks/objectives-faces-4d91a50427.png",
         "width": 2328,
-        "height": 2595
+        "height": 2595,
+        "revision": "ebec91d919"
       },
       "back": {
         "path": "assets/decks/objectives-back-c08c78cc67.png",
         "width": 388,
-        "height": 519
+        "height": 519,
+        "revision": "2e704644f4"
       }
     },
     {
@@ -83,12 +91,14 @@
       "face": {
         "path": "assets/decks/specials-faces-adc1172863.png",
         "width": 2652,
-        "height": 2560
+        "height": 2560,
+        "revision": "b5ef08c116"
       },
       "back": {
         "path": "assets/decks/specials-back-0b946676e3.png",
         "width": 442,
-        "height": 640
+        "height": 640,
+        "revision": "75ead6c66e"
       }
     }
   ],
@@ -98,84 +108,96 @@
       "figmaId": "282:1158",
       "path": "assets/tokens/action-tile-1-fb100c9aa5.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "40c6dccfc9"
     },
     {
       "title": "Action tile 2",
       "figmaId": "282:1180",
       "path": "assets/tokens/action-tile-2-7107aa55c8.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "64632a2af6"
     },
     {
       "title": "Action tile 3",
       "figmaId": "305:906",
       "path": "assets/tokens/action-tile-3.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "b827dcf724"
     },
     {
       "title": "Action tile 4",
       "figmaId": "305:924",
       "path": "assets/tokens/action-tile-4-21af0fce2d.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "cbf1c1bd2d"
     },
     {
       "title": "Action tile 5",
       "figmaId": "282:1177",
       "path": "assets/tokens/action-tile-5-39a0ec00fc.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "ad631c2d1e"
     },
     {
       "title": "Action tile 6",
       "figmaId": "305:912",
       "path": "assets/tokens/action-tile-6-813e8438d5.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "6765ceabf8"
     },
     {
       "title": "Action tile 7",
       "figmaId": "282:1163",
       "path": "assets/tokens/action-tile-7-7d3d7a7703.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "46c92731b7"
     },
     {
       "title": "Action tile 8",
       "figmaId": "305:930",
       "path": "assets/tokens/action-tile-8.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "36ff50ef24"
     },
     {
       "title": "Action tile 9",
       "figmaId": "282:3841",
       "path": "assets/tokens/action-tile-9.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "b2e5198623"
     },
     {
       "title": "Action tile 10",
       "figmaId": "305:915",
       "path": "assets/tokens/action-tile-10.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "ad4de27e88"
     },
     {
       "title": "Action tile 11",
       "figmaId": "282:2931",
       "path": "assets/tokens/action-tile-11.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "9c36bd3826"
     },
     {
       "title": "Action tile 12",
       "figmaId": "305:933",
       "path": "assets/tokens/action-tile-12.png",
       "width": 213,
-      "height": 213
+      "height": 213,
+      "revision": "3c70c4309f"
     }
   ]
 }
