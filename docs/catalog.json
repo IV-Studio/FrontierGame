@@ -1,203 +1,179 @@
 {
-  "source": "Figma Page 3 Game components slice 282:2815",
+  "source": "Figma Page 4 Game Components slice 339:5632",
   "boards": [
     {
       "title": "Main board",
-      "figmaId": "282:1521",
+      "figmaId": "373:3722",
       "path": "assets/boards/board-main-e46ceed54f.png",
-      "width": 3394,
-      "height": 2761,
-      "revision": "c1db2b9277"
-    },
-    {
-      "title": "The Edge",
-      "figmaId": "282:1845",
-      "path": "assets/boards/board-edge-4a245f7e45.png",
-      "width": 1536,
-      "height": 1024,
-      "revision": "ca75a35f3d"
+      "width": 4096,
+      "height": 2960,
+      "revision": "27afc99070"
     }
   ],
   "cards": [
     {
       "title": "Action Guide",
-      "figmaId": "282:1189",
+      "figmaId": "339:4073",
       "path": "assets/cards/card-action-guide-6323e6fee4.png",
       "width": 506,
       "height": 729,
-      "revision": "7b222e6a85"
+      "revision": "32b6b7b4d4"
     },
     {
       "title": "Region Bonus Guide",
-      "figmaId": "282:1230",
+      "figmaId": "339:4123",
       "path": "assets/cards/card-region-bonus-guide-800eb32bd9.png",
-      "width": 506,
-      "height": 732,
-      "revision": "16ba4993bc"
+      "width": 759,
+      "height": 1098,
+      "revision": "98b4c263bc"
     }
   ],
   "references": [],
   "decks": [
     {
       "title": "Monuments",
-      "figmaId": "282:1897",
-      "count": 27,
-      "columns": 7,
+      "figmaId": "339:4797",
+      "count": 24,
+      "columns": 6,
       "rows": 4,
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
-        "width": 3094,
+        "width": 2652,
         "height": 2560,
-        "revision": "2632d36ba0"
+        "revision": "7a3c5f7edc"
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
         "width": 442,
         "height": 640,
-        "revision": "1edb39b7f6"
+        "revision": "dab77c147b"
       }
     },
     {
       "title": "Objectives",
-      "figmaId": "282:1252",
-      "count": 30,
+      "figmaId": "339:4151",
+      "count": 18,
       "columns": 6,
-      "rows": 5,
+      "rows": 3,
       "cardWidth": 388,
       "cardHeight": 519,
       "face": {
         "path": "assets/decks/objectives-faces-4d91a50427.png",
         "width": 2328,
-        "height": 2595,
-        "revision": "ebec91d919"
+        "height": 1557,
+        "revision": "a37ecd085f"
       },
       "back": {
         "path": "assets/decks/objectives-back-c08c78cc67.png",
         "width": 388,
         "height": 519,
-        "revision": "2e704644f4"
+        "revision": "cc7db17312"
       }
     },
     {
       "title": "Specials",
-      "figmaId": "282:2715",
-      "count": 22,
-      "columns": 6,
-      "rows": 4,
+      "figmaId": "339:5468",
+      "count": 24,
+      "columns": 4,
+      "rows": 6,
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
         "path": "assets/decks/specials-faces-adc1172863.png",
-        "width": 2652,
-        "height": 2560,
-        "revision": "b5ef08c116"
+        "width": 1768,
+        "height": 3840,
+        "revision": "fd4011cdc6"
       },
       "back": {
         "path": "assets/decks/specials-back-0b946676e3.png",
         "width": 442,
         "height": 640,
-        "revision": "75ead6c66e"
+        "revision": "716e286590"
       }
     }
   ],
   "tokens": [
     {
-      "title": "Action tile 1",
-      "figmaId": "282:1158",
+      "title": "Build 4",
+      "figmaId": "353:1940",
       "path": "assets/tokens/action-tile-1-fb100c9aa5.png",
-      "width": 213,
-      "height": 213,
-      "revision": "40c6dccfc9"
+      "width": 426,
+      "height": 426,
+      "revision": "989ae47648"
     },
     {
-      "title": "Action tile 2",
-      "figmaId": "282:1180",
+      "title": "Region bonus",
+      "figmaId": "339:4070",
       "path": "assets/tokens/action-tile-2-7107aa55c8.png",
-      "width": 213,
-      "height": 213,
-      "revision": "64632a2af6"
+      "width": 426,
+      "height": 426,
+      "revision": "649b646ee8"
     },
     {
-      "title": "Action tile 3",
-      "figmaId": "305:906",
+      "title": "Build 3",
+      "figmaId": "353:2029",
       "path": "assets/tokens/action-tile-3.png",
-      "width": 213,
-      "height": 213,
-      "revision": "b827dcf724"
+      "width": 427,
+      "height": 427,
+      "revision": "a012cf7af2"
     },
     {
-      "title": "Action tile 4",
-      "figmaId": "305:924",
+      "title": "Build 4, four regions",
+      "figmaId": "353:1918",
       "path": "assets/tokens/action-tile-4-21af0fce2d.png",
-      "width": 213,
-      "height": 213,
-      "revision": "cbf1c1bd2d"
+      "width": 427,
+      "height": 427,
+      "revision": "55e88bb6be"
     },
     {
-      "title": "Action tile 5",
-      "figmaId": "282:1177",
+      "title": "+1",
+      "figmaId": "339:4061",
       "path": "assets/tokens/action-tile-5-39a0ec00fc.png",
-      "width": 213,
-      "height": 213,
-      "revision": "ad631c2d1e"
+      "width": 426,
+      "height": 426,
+      "revision": "35563c5885"
     },
     {
-      "title": "Action tile 6",
-      "figmaId": "305:912",
+      "title": "+2",
+      "figmaId": "339:4064",
       "path": "assets/tokens/action-tile-6-813e8438d5.png",
-      "width": 213,
-      "height": 213,
-      "revision": "6765ceabf8"
+      "width": 426,
+      "height": 426,
+      "revision": "d2a8f29a2f"
     },
     {
-      "title": "Action tile 7",
-      "figmaId": "282:1163",
+      "title": "Build 2, four regions",
+      "figmaId": "353:1851",
       "path": "assets/tokens/action-tile-7-7d3d7a7703.png",
-      "width": 213,
-      "height": 213,
-      "revision": "46c92731b7"
+      "width": 427,
+      "height": 427,
+      "revision": "f677694064"
     },
     {
-      "title": "Action tile 8",
-      "figmaId": "305:930",
+      "title": "+3",
+      "figmaId": "339:4067",
       "path": "assets/tokens/action-tile-8.png",
-      "width": 213,
-      "height": 213,
-      "revision": "36ff50ef24"
+      "width": 426,
+      "height": 426,
+      "revision": "e5071bf25c"
     },
     {
-      "title": "Action tile 9",
-      "figmaId": "282:3841",
+      "title": "Move",
+      "figmaId": "353:2007",
       "path": "assets/tokens/action-tile-9.png",
-      "width": 213,
-      "height": 213,
-      "revision": "b2e5198623"
+      "width": 427,
+      "height": 427,
+      "revision": "832b4116c5"
     },
     {
-      "title": "Action tile 10",
-      "figmaId": "305:915",
+      "title": "Build 6",
+      "figmaId": "353:1984",
       "path": "assets/tokens/action-tile-10.png",
-      "width": 213,
-      "height": 213,
-      "revision": "ad4de27e88"
-    },
-    {
-      "title": "Action tile 11",
-      "figmaId": "282:2931",
-      "path": "assets/tokens/action-tile-11.png",
-      "width": 213,
-      "height": 213,
-      "revision": "9c36bd3826"
-    },
-    {
-      "title": "Action tile 12",
-      "figmaId": "305:933",
-      "path": "assets/tokens/action-tile-12.png",
-      "width": 213,
-      "height": 213,
-      "revision": "3c70c4309f"
+      "width": 426,
+      "height": 426,
+      "revision": "7241052671"
     }
   ]
 }

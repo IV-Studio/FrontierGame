@@ -1,20 +1,20 @@
 # Frontier Tabletop Simulator assets
 
-The [Game components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=218-13798) defines the playable export set. The static catalog is in `docs/`; publish that folder with GitHub Pages. It provides direct PNG links for Tabletop Simulator and deck import settings.
+The [Page 4 Game Components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=339-5632) defines the playable export set. The static catalog is in `docs/`; GitHub Pages publishes that folder. It provides direct PNG links for Tabletop Simulator and deck import settings.
 
 Current export:
 
 | Deck | Cards | Width | Height | Back |
 | --- | ---: | ---: | ---: | --- |
-| Monuments | 32 | 8 | 4 | Monument card back |
-| Objectives | 30 | 6 | 5 | Objective card back |
-| Specials | 16 | 4 | 4 | Special Card back |
+| Monuments | 24 | 6 | 4 | Monument card back |
+| Objectives | 18 | 6 | 3 | Objective card back |
+| Specials | 24 | 4 | 6 | Special Card back |
 
-There are also 3 boards, 2 standalone guide cards, a location reference table, and 13 tokens. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS.
+There is one main board, two standalone guide cards, and ten action tiles. The previous main board is replaced at its existing URL; The Edge is retired from the catalog. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS.
 
 ## Refreshing the exports
 
-1. Render the current contents of the Figma slice into `tmp/figma-export/`. Export grouped card frames at their natural size with no page overlays; export each board, back, guide, token, and the location table individually. The Figma node IDs and names are recorded in `docs/catalog.json`.
+1. Render the current contents of the Figma slice into `tmp/figma-export/`. Export monument and objective frames, each special card, the board, backs, guides, and action tiles. The Figma node IDs and names are recorded in `docs/catalog.json` and `scripts/build_assets.py`.
 2. Run `scripts/build_assets.py` with Python and Pillow. This packs the card groups, copies individual assets, and regenerates `docs/catalog.json` and `docs/catalog.js`.
 3. Review the deck previews and counts, then commit and push `docs/` and `archive/` to GitHub. GitHub Pages serves the landing page and current image files.
 

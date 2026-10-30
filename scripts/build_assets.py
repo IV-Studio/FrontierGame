@@ -121,38 +121,53 @@ def sheet(name: str, count: int, source_columns: int, origin: tuple[int, int],
             "rows": rows, "cardWidth": card_size[0], "cardHeight": card_size[1]}
 
 
+def individual_sheet(name: str, count: int, columns: int, rows: int,
+                     card_size: tuple[int, int]) -> dict:
+    """Pack individually exported cards without downscaling a large Figma frame."""
+    result = Image.new("RGBA", (columns * card_size[0], rows * card_size[1]))
+    for index in range(count):
+        card = load(f"{name}-card-{index + 1:02d}").convert("RGBA")
+        if card.size != card_size:
+            raise ValueError(f"Unexpected {name} card {index + 1} size: {card.size}")
+        result.paste(card, ((index % columns) * card_size[0],
+                            (index // columns) * card_size[1]))
+    return {"image": result, "count": count, "columns": columns,
+            "rows": rows, "cardWidth": card_size[0], "cardHeight": card_size[1]}
+
+
 def main() -> None:
     DOCS.mkdir(exist_ok=True)
     publish = Publisher()
-    catalog = {"source": "Figma Page 3 Game components slice 282:2815", "boards": [],
+    catalog = {"source": "Figma Page 4 Game Components slice 339:5632", "boards": [],
                "cards": [], "references": [], "decks": [], "tokens": []}
 
     for slug, title, figma_id in [
-        ("board-main", "Main board", "282:1521"),
-        ("board-edge", "The Edge", "282:1845"),
+        ("board-main", "Main board", "373:3722"),
     ]:
         catalog["boards"].append({"title": title, "figmaId": figma_id,
                                    **publish(load(slug), "boards", slug)})
 
     for slug, title, figma_id in [
-        ("card-action-guide", "Action Guide", "282:1189"),
-        ("card-region-bonus-guide", "Region Bonus Guide", "282:1230"),
+        ("card-action-guide", "Action Guide", "339:4073"),
+        ("card-region-bonus-guide", "Region Bonus Guide", "339:4123"),
     ]:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
 
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "282:1897", 27, 6, (0, 0), (482, 680),
-         (442, 640), 7, 4, "back-monument", 0),
-        ("objectives", "objectives", "Objectives", "282:1252", 30, 6, (196, 140), (420, 551),
-         (388, 519), 6, 5, "back-objective", 0),
-        ("specials", "specials", "Specials", "282:2715", 22, 4, (0, 0), (482, 680),
-         (442, 640), 6, 4, "back-special", 0),
+        ("monuments", "monuments", "Monuments", "339:4797", 24, 6, (0, 0), (482, 680),
+         (442, 640), 6, 4, "back-monument", 0),
+        ("objectives", "objectives", "Objectives", "339:4151", 18, 6, (196, 140), (420, 551),
+         (388, 519), 6, 3, "back-objective", 0),
+        ("specials", "specials", "Specials", "339:5468", 24, 4, (0, 0), (482, 680),
+         (442, 640), 4, 6, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
          card_size, columns, rows, back_slug, start) in deck_specs:
-        packed = sheet(slug, count, source_columns, origin, stride,
-                       card_size, columns, rows, start)
+        packed = (individual_sheet("special", count, columns, rows, card_size)
+                  if slug == "specials" else
+                  sheet(slug, count, source_columns, origin, stride,
+                        card_size, columns, rows, start))
         face = publish(packed.pop("image"), "decks", f"{asset_slug}-faces")
         back = load(back_slug)
         if back.size != card_size:
@@ -163,26 +178,21 @@ def main() -> None:
                                   **packed, "face": face, "back": back_asset})
 
     action_tiles = [
-        ("action-tile-1", "Action tile 1", "282:1158"),
-        ("action-tile-2", "Action tile 2", "282:1180"),
-        ("action-tile-3", "Action tile 3", "305:906"),
-        ("action-tile-4", "Action tile 4", "305:924"),
-        ("action-tile-5", "Action tile 5", "282:1177"),
-        ("action-tile-6", "Action tile 6", "305:912"),
-        ("action-tile-7", "Action tile 7", "282:1163"),
-        ("action-tile-8", "Action tile 8", "305:930"),
-        ("action-tile-9", "Action tile 9", "282:3841"),
-        ("action-tile-10", "Action tile 10", "305:915"),
-        ("action-tile-11", "Action tile 11", "282:2931"),
-        ("action-tile-12", "Action tile 12", "305:933"),
+        ("action-tile-1", "Build 4", "353:1940", "current-tile-1940"),
+        ("action-tile-2", "Region bonus", "339:4070", "current-tile-4070"),
+        ("action-tile-3", "Build 3", "353:2029", "current-tile-2029"),
+        ("action-tile-4", "Build 4, four regions", "353:1918", "current-tile-1918"),
+        ("action-tile-5", "+1", "339:4061", "current-tile-4061"),
+        ("action-tile-6", "+2", "339:4064", "current-tile-4064"),
+        ("action-tile-7", "Build 2, four regions", "353:1851", "current-tile-1851"),
+        ("action-tile-8", "+3", "339:4067", "current-tile-4067"),
+        ("action-tile-9", "Move", "353:2007", "current-tile-2007"),
+        ("action-tile-10", "Build 6", "353:1984", "current-tile-1984"),
     ]
-    for slug, title, figma_id in action_tiles:
+    for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,
                                   "figmaId": figma_id,
-                                  **publish(load(slug), "tokens", slug)})
-
-    # The former second-design URL may already be linked in TTS.
-    publish(load("action-tile-11"), "tokens", "action-tile-7-variant")
+                                  **publish(load(source), "tokens", slug)})
 
     manifest = json.dumps(catalog, indent=2, ensure_ascii=False)
     (DOCS / "catalog.json").write_text(manifest + "\n", encoding="utf-8")
