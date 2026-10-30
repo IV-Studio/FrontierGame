@@ -22,6 +22,8 @@ SOURCE = ROOT / "tmp" / "figma-export"
 ASSETS = ROOT / "docs" / "assets"
 DOCS = ROOT / "docs"
 ARCHIVE = ROOT / "archive" / "assets"
+# The six newly added Page 5 Monuments have small manual x offsets.
+CARD_X_OFFSETS = {"monuments": {26: 4, 27: 4, 28: 8, 29: 8}}
 
 
 class Publisher:
@@ -31,6 +33,7 @@ class Publisher:
                  catalog_path: Path = DOCS / "catalog.json") -> None:
         self.assets = assets
         self.archive = archive
+        self.active_paths: set[Path] = set()
         self.preferred: dict[tuple[str, str], str] = {}
         if catalog_path.exists():
             self._read_paths(json.loads(catalog_path.read_text(encoding="utf-8")))
@@ -65,6 +68,7 @@ class Publisher:
         aliases = {path for path in directory.iterdir()
                    if path.is_file() and alias_pattern.fullmatch(path.name)}
         aliases.add(directory / filename)
+        self.active_paths.update(aliases)
 
         for path in sorted(aliases):
             if path.exists():
@@ -91,6 +95,29 @@ class Publisher:
                 "width": image.width, "height": image.height,
                 "revision": hashlib.sha256(data).hexdigest()[:10]}
 
+    def retire_unlisted(self) -> list[str]:
+        """Archive and remove published PNGs absent from the current slice."""
+        retired = []
+        for path in sorted(self.assets.glob("*/*.png")):
+            if path in self.active_paths:
+                continue
+            category = path.parent.name
+            match = re.fullmatch(r"(.+?)(?:-[0-9a-f]{10})?\.png", path.name)
+            if not match:
+                raise ValueError(f"Unexpected asset filename: {path}")
+            slug = match.group(1)
+            data = path.read_bytes()
+            digest = hashlib.sha256(data).hexdigest()[:12]
+            saved = self.archive / category / slug / f"{digest}.png"
+            saved.parent.mkdir(parents=True, exist_ok=True)
+            if saved.exists() and saved.read_bytes() != data:
+                raise ValueError(f"Archive hash collision: {saved}")
+            if not saved.exists():
+                saved.write_bytes(data)
+            path.unlink()
+            retired.append(f"{category}/{path.name}")
+        return retired
+
 
 def load(name: str) -> Image.Image:
     path = SOURCE / f"{name}.png"
@@ -109,7 +136,7 @@ def sheet(name: str, count: int, source_columns: int, origin: tuple[int, int],
         source_index = start + index
         source_col = source_index % source_columns
         source_row = source_index // source_columns
-        x = origin[0] + source_col * stride[0]
+        x = origin[0] + source_col * stride[0] + CARD_X_OFFSETS.get(name, {}).get(source_index, 0)
         y = origin[1] + source_row * stride[1]
         box = (x, y, x + card_size[0], y + card_size[1])
         if box[2] > image.width or box[3] > image.height:
@@ -138,28 +165,28 @@ def individual_sheet(name: str, count: int, columns: int, rows: int,
 def main() -> None:
     DOCS.mkdir(exist_ok=True)
     publish = Publisher()
-    catalog = {"source": "Figma Page 4 Game Components slice 339:5632", "boards": [],
+    catalog = {"source": "Figma Page 5 Game components slice 400:5081", "boards": [],
                "cards": [], "references": [], "decks": [], "tokens": []}
 
     for slug, title, figma_id in [
-        ("board-main", "Main board", "373:3722"),
+        ("board-main", "Main board", "400:5197"),
     ]:
         catalog["boards"].append({"title": title, "figmaId": figma_id,
                                    **publish(load(slug), "boards", slug)})
 
     for slug, title, figma_id in [
-        ("card-action-guide", "Action Guide", "339:4073"),
-        ("card-region-bonus-guide", "Region Bonus Guide", "339:4123"),
+        ("card-action-guide", "Action Guide", "400:3386"),
+        ("card-region-bonus-guide", "Region Bonus Guide", "400:3436"),
     ]:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
 
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "339:4797", 24, 6, (0, 0), (482, 680),
-         (442, 640), 6, 4, "back-monument", 0),
-        ("objectives", "objectives", "Objectives", "339:4151", 18, 6, (196, 140), (420, 551),
+        ("monuments", "monuments", "Monuments", "400:4331", 30, 6, (0, 0), (482, 680),
+         (442, 640), 6, 5, "back-monument", 0),
+        ("objectives", "objectives", "Objectives", "400:3464", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "339:5468", 24, 4, (0, 0), (482, 680),
+        ("specials", "specials", "Specials", "400:4909", 24, 4, (0, 0), (482, 680),
          (442, 640), 4, 6, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
@@ -178,21 +205,23 @@ def main() -> None:
                                   **packed, "face": face, "back": back_asset})
 
     action_tiles = [
-        ("action-tile-1", "Build 4", "353:1940", "current-tile-1940"),
-        ("action-tile-2", "Region bonus", "339:4070", "current-tile-4070"),
-        ("action-tile-3", "Build 3", "353:2029", "current-tile-2029"),
-        ("action-tile-4", "Build 4, four regions", "353:1918", "current-tile-1918"),
-        ("action-tile-5", "+1", "339:4061", "current-tile-4061"),
-        ("action-tile-6", "+2", "339:4064", "current-tile-4064"),
-        ("action-tile-7", "Build 2, four regions", "353:1851", "current-tile-1851"),
-        ("action-tile-8", "+3", "339:4067", "current-tile-4067"),
-        ("action-tile-9", "Move", "353:2007", "current-tile-2007"),
-        ("action-tile-10", "Build 6", "353:1984", "current-tile-1984"),
+        ("action-tile-1", "Build 4", "400:3302", "page5-tile-3302"),
+        ("action-tile-2", "Region bonus", "400:3383", "page5-tile-3383"),
+        ("action-tile-3", "Build 3", "400:3254", "page5-tile-3254"),
+        ("action-tile-4", "Build 4, four regions", "400:3351", "page5-tile-3351"),
+        ("action-tile-5", "+1", "400:3374", "page5-tile-3374"),
+        ("action-tile-6", "+2", "400:3377", "page5-tile-3377"),
+        ("action-tile-7", "Build 2, four regions", "400:3232", "page5-tile-3232"),
+        ("action-tile-8", "+3", "400:3380", "page5-tile-3380"),
+        ("action-tile-9", "Move", "400:3276", "page5-tile-3276"),
+        ("action-tile-10", "Build 6", "400:3324", "page5-tile-3324"),
     ]
     for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,
                                   "figmaId": figma_id,
                                   **publish(load(source), "tokens", slug)})
+
+    retired = publish.retire_unlisted()
 
     manifest = json.dumps(catalog, indent=2, ensure_ascii=False)
     (DOCS / "catalog.json").write_text(manifest + "\n", encoding="utf-8")
@@ -206,7 +235,7 @@ def main() -> None:
     index.write_text(html, encoding="utf-8")
     print(f"Built {len(catalog['decks'])} decks, {len(catalog['boards'])} boards, "
           f"{len(catalog['cards'])} cards, {len(catalog['references'])} references, "
-          f"{len(catalog['tokens'])} tokens")
+          f"{len(catalog['tokens'])} tokens; retired {len(retired)} old images")
 
 
 if __name__ == "__main__":

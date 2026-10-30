@@ -1,19 +1,19 @@
 {
-  "source": "Figma Page 4 Game Components slice 339:5632",
+  "source": "Figma Page 5 Game components slice 400:5081",
   "boards": [
     {
       "title": "Main board",
-      "figmaId": "373:3722",
+      "figmaId": "400:5197",
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 4096,
       "height": 2960,
-      "revision": "d10aa2aadc"
+      "revision": "d2559f2df6"
     }
   ],
   "cards": [
     {
       "title": "Action Guide",
-      "figmaId": "339:4073",
+      "figmaId": "400:3386",
       "path": "assets/cards/card-action-guide-6323e6fee4.png",
       "width": 506,
       "height": 729,
@@ -21,28 +21,28 @@
     },
     {
       "title": "Region Bonus Guide",
-      "figmaId": "339:4123",
+      "figmaId": "400:3436",
       "path": "assets/cards/card-region-bonus-guide-800eb32bd9.png",
       "width": 759,
       "height": 1098,
-      "revision": "98b4c263bc"
+      "revision": "9f711bb71c"
     }
   ],
   "references": [],
   "decks": [
     {
       "title": "Monuments",
-      "figmaId": "339:4797",
-      "count": 24,
+      "figmaId": "400:4331",
+      "count": 30,
       "columns": 6,
-      "rows": 4,
+      "rows": 5,
       "cardWidth": 442,
       "cardHeight": 640,
       "face": {
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 2652,
-        "height": 2560,
-        "revision": "7a3c5f7edc"
+        "height": 3200,
+        "revision": "52d93c3942"
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Objectives",
-      "figmaId": "339:4151",
+      "figmaId": "400:3464",
       "count": 18,
       "columns": 6,
       "rows": 3,
@@ -74,7 +74,7 @@
     },
     {
       "title": "Specials",
-      "figmaId": "339:5468",
+      "figmaId": "400:4909",
       "count": 24,
       "columns": 4,
       "rows": 6,
@@ -97,7 +97,7 @@
   "tokens": [
     {
       "title": "Build 4",
-      "figmaId": "353:1940",
+      "figmaId": "400:3302",
       "path": "assets/tokens/action-tile-1-fb100c9aa5.png",
       "width": 426,
       "height": 426,
@@ -105,7 +105,7 @@
     },
     {
       "title": "Region bonus",
-      "figmaId": "339:4070",
+      "figmaId": "400:3383",
       "path": "assets/tokens/action-tile-2-7107aa55c8.png",
       "width": 426,
       "height": 426,
@@ -113,7 +113,7 @@
     },
     {
       "title": "Build 3",
-      "figmaId": "353:2029",
+      "figmaId": "400:3254",
       "path": "assets/tokens/action-tile-3.png",
       "width": 427,
       "height": 427,
@@ -121,7 +121,7 @@
     },
     {
       "title": "Build 4, four regions",
-      "figmaId": "353:1918",
+      "figmaId": "400:3351",
       "path": "assets/tokens/action-tile-4-21af0fce2d.png",
       "width": 427,
       "height": 427,
@@ -129,7 +129,7 @@
     },
     {
       "title": "+1",
-      "figmaId": "339:4061",
+      "figmaId": "400:3374",
       "path": "assets/tokens/action-tile-5-39a0ec00fc.png",
       "width": 426,
       "height": 426,
@@ -137,7 +137,7 @@
     },
     {
       "title": "+2",
-      "figmaId": "339:4064",
+      "figmaId": "400:3377",
       "path": "assets/tokens/action-tile-6-813e8438d5.png",
       "width": 426,
       "height": 426,
@@ -145,15 +145,15 @@
     },
     {
       "title": "Build 2, four regions",
-      "figmaId": "353:1851",
+      "figmaId": "400:3232",
       "path": "assets/tokens/action-tile-7-7d3d7a7703.png",
       "width": 427,
       "height": 427,
-      "revision": "f677694064"
+      "revision": "a1f7a74b1d"
     },
     {
       "title": "+3",
-      "figmaId": "339:4067",
+      "figmaId": "400:3380",
       "path": "assets/tokens/action-tile-8.png",
       "width": 426,
       "height": 426,
@@ -161,7 +161,7 @@
     },
     {
       "title": "Move",
-      "figmaId": "353:2007",
+      "figmaId": "400:3276",
       "path": "assets/tokens/action-tile-9.png",
       "width": 427,
       "height": 427,
@@ -169,7 +169,7 @@
     },
     {
       "title": "Build 6",
-      "figmaId": "353:1984",
+      "figmaId": "400:3324",
       "path": "assets/tokens/action-tile-10.png",
       "width": 426,
       "height": 426,

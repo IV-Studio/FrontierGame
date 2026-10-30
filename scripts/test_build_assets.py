@@ -39,6 +39,26 @@ class PublisherTest(unittest.TestCase):
                       "boards", "board-main")
             self.assertEqual(len(list((archive / "boards" / "board-main").glob("*.png"))), 2)
 
+    def test_retires_only_unlisted_assets_and_archives_their_bytes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            assets = root / "docs" / "assets"
+            directory = assets / "boards"
+            directory.mkdir(parents=True)
+            retired = directory / "board-edge-1111111111.png"
+            retired.write_bytes(b"retired artwork")
+            active = directory / "board-main-2222222222.png"
+            active.write_bytes(b"old main board")
+            archive = root / "archive" / "assets"
+            publisher = Publisher(assets, archive, root / "docs" / "catalog.json")
+            publisher(Image.new("RGB", (2, 2), "red"), "boards", "board-main")
+
+            self.assertEqual(publisher.retire_unlisted(), ["boards/board-edge-1111111111.png"])
+            self.assertFalse(retired.exists())
+            self.assertTrue(active.exists())
+            saved = list((archive / "boards" / "board-edge").glob("*.png"))
+            self.assertEqual([path.read_bytes() for path in saved], [b"retired artwork"])
+
 
 if __name__ == "__main__":
     unittest.main()
