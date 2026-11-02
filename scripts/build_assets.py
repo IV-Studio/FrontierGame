@@ -186,8 +186,8 @@ def main() -> None:
          (442, 640), 6, 5, "back-monument", 0),
         ("objectives", "objectives", "Objectives", "400:3464", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "400:4909", 24, 4, (0, 0), (482, 680),
-         (442, 640), 4, 6, "back-special", 0),
+        ("specials", "specials", "Specials", "400:4909", 20, 4, (0, 0), (492, 734),
+         (443, 704), 4, 5, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
          card_size, columns, rows, back_slug, start) in deck_specs:
@@ -215,6 +215,10 @@ def main() -> None:
         ("action-tile-8", "+3", "400:3380", "page5-tile-3380"),
         ("action-tile-9", "Move", "400:3276", "page5-tile-3276"),
         ("action-tile-10", "Build 6", "400:3324", "page5-tile-3324"),
+        ("action-tile-11", "Build 3, gray", "526:147", "page5-tile-147"),
+        ("action-tile-12", "Build 3, red", "526:169", "page5-tile-169"),
+        ("action-tile-13", "Move, blue and yellow", "526:191", "page5-tile-191"),
+        ("action-tile-14", "Move, yellow and red", "526:217", "page5-tile-217"),
     ]
     for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,
