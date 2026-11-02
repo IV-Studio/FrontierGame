@@ -7,7 +7,7 @@
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 4096,
       "height": 2960,
-      "revision": "d2559f2df6"
+      "revision": "1447c66148"
     }
   ],
   "cards": [
@@ -48,7 +48,7 @@
         "path": "assets/decks/monuments-back-a65fba90e2.png",
         "width": 442,
         "height": 640,
-        "revision": "dab77c147b"
+        "revision": "abfd3f1891"
       }
     },
     {
@@ -84,7 +84,7 @@
         "path": "assets/decks/specials-faces-adc1172863.png",
         "width": 1768,
         "height": 3840,
-        "revision": "fd4011cdc6"
+        "revision": "a229581d1b"
       },
       "back": {
         "path": "assets/decks/specials-back-0b946676e3.png",
