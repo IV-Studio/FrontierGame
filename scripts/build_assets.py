@@ -186,8 +186,8 @@ def main() -> None:
          (442, 640), 6, 5, "back-monument", 0),
         ("objectives", "objectives", "Objectives", "400:3464", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "400:4909", 20, 4, (0, 0), (492, 734),
-         (443, 704), 4, 5, "back-special", 0),
+        ("specials", "specials", "Specials", "400:4909", 18, 4, (0, 0), (492, 734),
+         (443, 704), 6, 3, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
          card_size, columns, rows, back_slug, start) in deck_specs:
@@ -206,19 +206,17 @@ def main() -> None:
 
     action_tiles = [
         ("action-tile-1", "Build 4", "400:3302", "page5-tile-3302"),
-        ("action-tile-2", "Region bonus", "400:3383", "page5-tile-3383"),
-        ("action-tile-3", "Build 3", "400:3254", "page5-tile-3254"),
-        ("action-tile-4", "Build 4, four regions", "400:3351", "page5-tile-3351"),
-        ("action-tile-5", "+1", "400:3374", "page5-tile-3374"),
-        ("action-tile-6", "+2", "400:3377", "page5-tile-3377"),
-        ("action-tile-7", "Build 2, four regions", "400:3232", "page5-tile-3232"),
-        ("action-tile-8", "+3", "400:3380", "page5-tile-3380"),
-        ("action-tile-9", "Move", "400:3276", "page5-tile-3276"),
-        ("action-tile-10", "Build 6", "400:3324", "page5-tile-3324"),
-        ("action-tile-11", "Build 3, gray", "526:147", "page5-tile-147"),
-        ("action-tile-12", "Build 3, red", "526:169", "page5-tile-169"),
-        ("action-tile-13", "Move, blue and yellow", "526:191", "page5-tile-191"),
-        ("action-tile-14", "Move, yellow and red", "526:217", "page5-tile-217"),
+        ("action-tile-2", "Region Bonus", "400:3383", "page5-tile-3383"),
+        ("action-tile-3", "Build 3 — Blue", "400:3254", "page5-tile-3254"),
+        ("action-tile-5", "Action Upgrade +1", "400:3374", "page5-tile-3374"),
+        ("action-tile-6", "Action Upgrade +2", "400:3377", "page5-tile-3377"),
+        ("action-tile-7", "Build 3", "400:3232", "page5-tile-3232"),
+        ("action-tile-8", "Action Upgrade +3", "400:3380", "page5-tile-3380"),
+        ("action-tile-9", "Move — Blue Yellow Gray", "400:3276", "page5-tile-3276"),
+        ("action-tile-11", "Build 3 — Gray", "526:147", "page5-tile-147"),
+        ("action-tile-12", "Build 3 — Red", "526:169", "page5-tile-169"),
+        ("action-tile-13", "Move — Blue Yellow", "526:191", "page5-tile-191"),
+        ("action-tile-14", "Move — Yellow Red", "526:217", "page5-tile-217"),
     ]
     for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,
