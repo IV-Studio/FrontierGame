@@ -8,9 +8,9 @@ Current export:
 | --- | ---: | ---: | ---: | --- |
 | Monuments | 30 | 6 | 5 | Monument card back |
 | Objectives | 18 | 6 | 3 | Objective card back |
-| Specials | 18 | 6 | 3 | Special Card back |
+| Specials | 19 | 5 | 4 | Special Card back |
 
-There is one main board, two standalone guide cards, and twelve action tiles. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS.
+There is one main board, two standalone guide cards, and twelve action tiles. Each deck sheet has no spacing between card bounds. The 19-card Special sheet has one unused slot. Set **Back is Hidden** on when importing a deck into TTS.
 
 ## Refreshing the exports
 

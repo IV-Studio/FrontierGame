@@ -186,8 +186,8 @@ def main() -> None:
          (442, 640), 6, 5, "back-monument", 0),
         ("objectives", "objectives", "Objectives", "400:3464", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "400:4909", 18, 4, (0, 0), (492, 734),
-         (443, 704), 6, 3, "back-special", 0),
+        ("specials", "specials", "Specials", "400:4909", 19, 4, (0, 0), (492, 734),
+         (443, 704), 5, 4, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
          card_size, columns, rows, back_slug, start) in deck_specs:

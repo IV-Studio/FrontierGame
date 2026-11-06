@@ -7,7 +7,7 @@
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 4096,
       "height": 2960,
-      "revision": "788f060683"
+      "revision": "45021ff334"
     }
   ],
   "cards": [
@@ -42,7 +42,7 @@
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 2652,
         "height": 3200,
-        "revision": "e7878f313d"
+        "revision": "190d2ee0f9"
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
@@ -63,7 +63,7 @@
         "path": "assets/decks/objectives-faces-4d91a50427.png",
         "width": 2328,
         "height": 1557,
-        "revision": "96b64c3031"
+        "revision": "32e56861a8"
       },
       "back": {
         "path": "assets/decks/objectives-back-c08c78cc67.png",
@@ -75,16 +75,16 @@
     {
       "title": "Specials",
       "figmaId": "400:4909",
-      "count": 18,
-      "columns": 6,
-      "rows": 3,
+      "count": 19,
+      "columns": 5,
+      "rows": 4,
       "cardWidth": 443,
       "cardHeight": 704,
       "face": {
         "path": "assets/decks/specials-faces-adc1172863.png",
-        "width": 2658,
-        "height": 2112,
-        "revision": "312f1a4738"
+        "width": 2215,
+        "height": 2816,
+        "revision": "25ad4c82e8"
       },
       "back": {
         "path": "assets/decks/specials-back-0b946676e3.png",
