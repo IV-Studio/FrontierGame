@@ -1,19 +1,19 @@
 {
-  "source": "Figma Page 5 Game components slice 400:5081",
+  "source": "Figma Page 6 Game components slice 663:2418",
   "boards": [
     {
       "title": "Main board",
-      "figmaId": "400:5197",
+      "figmaId": "663:2534",
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 4096,
       "height": 2960,
-      "revision": "45021ff334"
+      "revision": "8c9a80a5b0"
     }
   ],
   "cards": [
     {
       "title": "Action Guide",
-      "figmaId": "400:3386",
+      "figmaId": "663:686",
       "path": "assets/cards/card-action-guide-6323e6fee4.png",
       "width": 506,
       "height": 729,
@@ -21,7 +21,7 @@
     },
     {
       "title": "Region Bonus Guide",
-      "figmaId": "400:3436",
+      "figmaId": "663:736",
       "path": "assets/cards/card-region-bonus-guide-800eb32bd9.png",
       "width": 759,
       "height": 1098,
@@ -32,7 +32,7 @@
   "decks": [
     {
       "title": "Monuments",
-      "figmaId": "400:4331",
+      "figmaId": "663:1580",
       "count": 30,
       "columns": 6,
       "rows": 5,
@@ -42,7 +42,7 @@
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 2652,
         "height": 3200,
-        "revision": "190d2ee0f9"
+        "revision": "9541761749"
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Objectives",
-      "figmaId": "400:3464",
+      "figmaId": "663:767",
       "count": 18,
       "columns": 6,
       "rows": 3,
@@ -74,7 +74,7 @@
     },
     {
       "title": "Specials",
-      "figmaId": "400:4909",
+      "figmaId": "663:2266",
       "count": 19,
       "columns": 5,
       "rows": 4,
@@ -97,7 +97,7 @@
   "tokens": [
     {
       "title": "Build 4",
-      "figmaId": "400:3302",
+      "figmaId": "663:652",
       "path": "assets/tokens/action-tile-1-fb100c9aa5.png",
       "width": 426,
       "height": 426,
@@ -105,7 +105,7 @@
     },
     {
       "title": "Region Bonus",
-      "figmaId": "400:3383",
+      "figmaId": "663:683",
       "path": "assets/tokens/action-tile-2-7107aa55c8.png",
       "width": 426,
       "height": 426,
@@ -113,23 +113,15 @@
     },
     {
       "title": "Build 3 — Blue",
-      "figmaId": "400:3254",
+      "figmaId": "663:508",
       "path": "assets/tokens/action-tile-3.png",
       "width": 427,
       "height": 427,
       "revision": "c6c06dbd7d"
     },
     {
-      "title": "Action Upgrade +1",
-      "figmaId": "400:3374",
-      "path": "assets/tokens/action-tile-5-39a0ec00fc.png",
-      "width": 426,
-      "height": 426,
-      "revision": "35563c5885"
-    },
-    {
       "title": "Action Upgrade +2",
-      "figmaId": "400:3377",
+      "figmaId": "663:677",
       "path": "assets/tokens/action-tile-6-813e8438d5.png",
       "width": 426,
       "height": 426,
@@ -137,23 +129,15 @@
     },
     {
       "title": "Build 3",
-      "figmaId": "400:3232",
+      "figmaId": "663:486",
       "path": "assets/tokens/action-tile-7-7d3d7a7703.png",
       "width": 426,
       "height": 426,
       "revision": "d137d4bdfe"
     },
     {
-      "title": "Action Upgrade +3",
-      "figmaId": "400:3380",
-      "path": "assets/tokens/action-tile-8.png",
-      "width": 426,
-      "height": 426,
-      "revision": "e5071bf25c"
-    },
-    {
       "title": "Move — Blue Yellow Gray",
-      "figmaId": "400:3276",
+      "figmaId": "663:574",
       "path": "assets/tokens/action-tile-9.png",
       "width": 427,
       "height": 427,
@@ -161,7 +145,7 @@
     },
     {
       "title": "Build 3 — Gray",
-      "figmaId": "526:147",
+      "figmaId": "663:530",
       "path": "assets/tokens/action-tile-11.png",
       "width": 427,
       "height": 427,
@@ -169,7 +153,7 @@
     },
     {
       "title": "Build 3 — Red",
-      "figmaId": "526:169",
+      "figmaId": "663:552",
       "path": "assets/tokens/action-tile-12.png",
       "width": 427,
       "height": 427,
@@ -177,7 +161,7 @@
     },
     {
       "title": "Move — Blue Yellow",
-      "figmaId": "526:191",
+      "figmaId": "663:600",
       "path": "assets/tokens/action-tile-13.png",
       "width": 427,
       "height": 427,
@@ -185,7 +169,7 @@
     },
     {
       "title": "Move — Yellow Red",
-      "figmaId": "526:217",
+      "figmaId": "663:626",
       "path": "assets/tokens/action-tile-14.png",
       "width": 427,
       "height": 427,

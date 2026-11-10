@@ -1,6 +1,6 @@
 # Frontier Tabletop Simulator assets
 
-The [Page 5 Game components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=400-5081) defines the playable export set. The static catalog is in `docs/`; GitHub Pages publishes that folder. It provides direct PNG links for Tabletop Simulator and deck import settings.
+The [Page 6 Game components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=663-2418) defines the playable export set. The static catalog is in `docs/`; GitHub Pages publishes that folder. It provides direct PNG links for Tabletop Simulator and deck import settings.
 
 Current export:
 
@@ -10,7 +10,7 @@ Current export:
 | Objectives | 18 | 6 | 3 | Objective card back |
 | Specials | 19 | 5 | 4 | Special Card back |
 
-There is one main board, two standalone guide cards, and twelve action tiles. Each deck sheet has no spacing between card bounds. The 19-card Special sheet has one unused slot. Set **Back is Hidden** on when importing a deck into TTS.
+There is one main board, two standalone guide cards, and ten action tiles. Each deck sheet has no spacing between card bounds. The 19-card Special sheet has one unused slot. Set **Back is Hidden** on when importing a deck into TTS.
 
 ## Refreshing the exports
 

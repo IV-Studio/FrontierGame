@@ -22,8 +22,8 @@ SOURCE = ROOT / "tmp" / "figma-export"
 ASSETS = ROOT / "docs" / "assets"
 DOCS = ROOT / "docs"
 ARCHIVE = ROOT / "archive" / "assets"
-# The six newly added Page 5 Monuments have small manual x offsets.
-CARD_X_OFFSETS = {"monuments": {26: 4, 27: 4, 28: 8, 29: 8}}
+# Three Page 6 Monument cards have small manual x offsets.
+CARD_X_OFFSETS = {"monuments": {26: 4, 27: 4, 28: 8}}
 
 
 class Publisher:
@@ -165,28 +165,28 @@ def individual_sheet(name: str, count: int, columns: int, rows: int,
 def main() -> None:
     DOCS.mkdir(exist_ok=True)
     publish = Publisher()
-    catalog = {"source": "Figma Page 5 Game components slice 400:5081", "boards": [],
+    catalog = {"source": "Figma Page 6 Game components slice 663:2418", "boards": [],
                "cards": [], "references": [], "decks": [], "tokens": []}
 
     for slug, title, figma_id in [
-        ("board-main", "Main board", "400:5197"),
+        ("board-main", "Main board", "663:2534"),
     ]:
         catalog["boards"].append({"title": title, "figmaId": figma_id,
                                    **publish(load(slug), "boards", slug)})
 
     for slug, title, figma_id in [
-        ("card-action-guide", "Action Guide", "400:3386"),
-        ("card-region-bonus-guide", "Region Bonus Guide", "400:3436"),
+        ("card-action-guide", "Action Guide", "663:686"),
+        ("card-region-bonus-guide", "Region Bonus Guide", "663:736"),
     ]:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
 
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "400:4331", 30, 6, (0, 0), (482, 680),
+        ("monuments", "monuments", "Monuments", "663:1580", 30, 6, (0, 0), (482, 680),
          (442, 640), 6, 5, "back-monument", 0),
-        ("objectives", "objectives", "Objectives", "400:3464", 18, 6, (196, 140), (420, 551),
+        ("objectives", "objectives", "Objectives", "663:767", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "400:4909", 19, 4, (0, 0), (492, 734),
+        ("specials", "specials", "Specials", "663:2266", 19, 4, (0, 0), (492, 734),
          (443, 704), 5, 4, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
@@ -205,18 +205,16 @@ def main() -> None:
                                   **packed, "face": face, "back": back_asset})
 
     action_tiles = [
-        ("action-tile-1", "Build 4", "400:3302", "page5-tile-3302"),
-        ("action-tile-2", "Region Bonus", "400:3383", "page5-tile-3383"),
-        ("action-tile-3", "Build 3 — Blue", "400:3254", "page5-tile-3254"),
-        ("action-tile-5", "Action Upgrade +1", "400:3374", "page5-tile-3374"),
-        ("action-tile-6", "Action Upgrade +2", "400:3377", "page5-tile-3377"),
-        ("action-tile-7", "Build 3", "400:3232", "page5-tile-3232"),
-        ("action-tile-8", "Action Upgrade +3", "400:3380", "page5-tile-3380"),
-        ("action-tile-9", "Move — Blue Yellow Gray", "400:3276", "page5-tile-3276"),
-        ("action-tile-11", "Build 3 — Gray", "526:147", "page5-tile-147"),
-        ("action-tile-12", "Build 3 — Red", "526:169", "page5-tile-169"),
-        ("action-tile-13", "Move — Blue Yellow", "526:191", "page5-tile-191"),
-        ("action-tile-14", "Move — Yellow Red", "526:217", "page5-tile-217"),
+        ("action-tile-1", "Build 4", "663:652", "page6-tile-652"),
+        ("action-tile-2", "Region Bonus", "663:683", "page6-tile-683"),
+        ("action-tile-3", "Build 3 — Blue", "663:508", "page6-tile-508"),
+        ("action-tile-6", "Action Upgrade +2", "663:677", "page6-tile-677"),
+        ("action-tile-7", "Build 3", "663:486", "page6-tile-486"),
+        ("action-tile-9", "Move — Blue Yellow Gray", "663:574", "page6-tile-574"),
+        ("action-tile-11", "Build 3 — Gray", "663:530", "page6-tile-530"),
+        ("action-tile-12", "Build 3 — Red", "663:552", "page6-tile-552"),
+        ("action-tile-13", "Move — Blue Yellow", "663:600", "page6-tile-600"),
+        ("action-tile-14", "Move — Yellow Red", "663:626", "page6-tile-626"),
     ]
     for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,
