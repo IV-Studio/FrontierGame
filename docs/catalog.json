@@ -166,6 +166,46 @@
       "width": 1243,
       "height": 1243,
       "revision": "2c984b4d21"
+    },
+    {
+      "title": "Dice 111",
+      "figmaId": "699:3254",
+      "path": "assets/dice/dice-111.png",
+      "width": 1243,
+      "height": 1243,
+      "revision": "bb92af58d0"
+    },
+    {
+      "title": "Dice 222",
+      "figmaId": "699:3291",
+      "path": "assets/dice/dice-222.png",
+      "width": 1243,
+      "height": 1243,
+      "revision": "a2a889b37d"
+    },
+    {
+      "title": "Dice 333",
+      "figmaId": "699:3329",
+      "path": "assets/dice/dice-333.png",
+      "width": 1243,
+      "height": 1243,
+      "revision": "ce0b8701c2"
+    },
+    {
+      "title": "Dice 444",
+      "figmaId": "699:3367",
+      "path": "assets/dice/dice-444.png",
+      "width": 1243,
+      "height": 1243,
+      "revision": "ccd3223f1a"
+    },
+    {
+      "title": "Dice 555",
+      "figmaId": "699:3405",
+      "path": "assets/dice/dice-555.png",
+      "width": 1243,
+      "height": 1243,
+      "revision": "38fc446618"
     }
   ],
   "tokens": [

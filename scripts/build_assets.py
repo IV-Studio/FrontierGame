@@ -231,6 +231,11 @@ def main() -> None:
         ("dice-33", "Dice 33", "697:3193"),
         ("dice-44", "Dice 44", "697:3213"),
         ("dice-55", "Dice 55", "697:3233"),
+        ("dice-111", "Dice 111", "699:3254"),
+        ("dice-222", "Dice 222", "699:3291"),
+        ("dice-333", "Dice 333", "699:3329"),
+        ("dice-444", "Dice 444", "699:3367"),
+        ("dice-555", "Dice 555", "699:3405"),
     ]:
         catalog["dice"].append({"title": title, "figmaId": figma_id,
                                 **publish(load(slug), "dice", slug)})
