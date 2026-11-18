@@ -10,7 +10,7 @@ Current export:
 | Objectives | 18 | 6 | 3 | Objective card back |
 | Specials | 19 | 5 | 4 | Special Card back |
 
-There is one main board, two standalone guide cards, four dice textures, and ten action tiles. Each deck sheet has no spacing between card bounds. The 19-card Special sheet has one unused slot. Set **Back is Hidden** on when importing a deck into TTS.
+There is one main board, two standalone guide cards, nine dice textures, and ten action tiles. Each deck sheet has no spacing between card bounds. The 19-card Special sheet has one unused slot. Set **Back is Hidden** on when importing a deck into TTS.
 
 ## Refreshing the exports
 
