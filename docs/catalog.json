@@ -101,7 +101,7 @@
       "path": "assets/dice/dice-1.png",
       "width": 1503,
       "height": 1503,
-      "revision": "b23382c1e4"
+      "revision": "f6e7a68519"
     },
     {
       "title": "Dice 2",
@@ -109,7 +109,7 @@
       "path": "assets/dice/dice-2.png",
       "width": 1503,
       "height": 1503,
-      "revision": "8b0fe6a44d"
+      "revision": "1b0198594f"
     },
     {
       "title": "Dice 3",
@@ -117,7 +117,7 @@
       "path": "assets/dice/dice-3.png",
       "width": 1503,
       "height": 1503,
-      "revision": "05e558f09b"
+      "revision": "d3b4453c02"
     },
     {
       "title": "Dice 4",
@@ -125,7 +125,7 @@
       "path": "assets/dice/dice-4.png",
       "width": 1503,
       "height": 1503,
-      "revision": "f71669f88a"
+      "revision": "ac4b4e499b"
     },
     {
       "title": "Dice 11",
@@ -133,7 +133,7 @@
       "path": "assets/dice/dice-11.png",
       "width": 1243,
       "height": 1243,
-      "revision": "429c5e3f3b"
+      "revision": "5337b3846b"
     },
     {
       "title": "Dice 22",
@@ -141,7 +141,7 @@
       "path": "assets/dice/dice-22.png",
       "width": 1243,
       "height": 1243,
-      "revision": "a7822950e2"
+      "revision": "8618f9aa06"
     },
     {
       "title": "Dice 33",
@@ -149,7 +149,7 @@
       "path": "assets/dice/dice-33.png",
       "width": 1243,
       "height": 1243,
-      "revision": "88533849d3"
+      "revision": "edca4adeda"
     },
     {
       "title": "Dice 44",
@@ -157,7 +157,7 @@
       "path": "assets/dice/dice-44.png",
       "width": 1243,
       "height": 1243,
-      "revision": "90ca86fb9c"
+      "revision": "2b5cd1f078"
     },
     {
       "title": "Dice 55",
@@ -165,7 +165,7 @@
       "path": "assets/dice/dice-55.png",
       "width": 1243,
       "height": 1243,
-      "revision": "60a88e59d3"
+      "revision": "2c984b4d21"
     }
   ],
   "tokens": [
