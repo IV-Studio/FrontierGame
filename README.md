@@ -1,6 +1,6 @@
 # Frontier Tabletop Simulator assets
 
-The [Page 6 Game components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=663-2418) defines the playable export set. The static catalog is in `docs/`; GitHub Pages publishes that folder. It provides direct PNG links for Tabletop Simulator and deck import settings.
+The [Page 7 Game components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=688-2058) defines the playable export set. The static catalog is in `docs/`; GitHub Pages publishes that folder. It provides direct PNG links for Tabletop Simulator and deck import settings.
 
 Current export:
 
@@ -10,11 +10,11 @@ Current export:
 | Objectives | 18 | 6 | 3 | Objective card back |
 | Specials | 19 | 5 | 4 | Special Card back |
 
-There is one main board, two standalone guide cards, and ten action tiles. Each deck sheet has no spacing between card bounds. The 19-card Special sheet has one unused slot. Set **Back is Hidden** on when importing a deck into TTS.
+There is one main board, two standalone guide cards, four dice textures, and ten action tiles. Each deck sheet has no spacing between card bounds. The 19-card Special sheet has one unused slot. Set **Back is Hidden** on when importing a deck into TTS.
 
 ## Refreshing the exports
 
-1. Render the current contents of the Figma slice into `tmp/figma-export/`. Export monument and objective frames, each special card, the board, backs, guides, and action tiles. The Figma node IDs and names are recorded in `docs/catalog.json` and `scripts/build_assets.py`.
+1. Render the current contents of the Figma slice into `tmp/figma-export/`. Export monument and objective frames, each special card, the board, backs, guides, dice, and action tiles. The Figma node IDs and names are recorded in `docs/catalog.json` and `scripts/build_assets.py`.
 2. Run `scripts/build_assets.py` with Python and Pillow. This packs the card groups, copies individual assets, and regenerates `docs/catalog.json` and `docs/catalog.js`.
 3. Review the deck previews and counts, then commit and push `docs/` and `archive/` to GitHub. GitHub Pages serves the landing page and current image files.
 

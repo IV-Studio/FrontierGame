@@ -22,7 +22,7 @@ SOURCE = ROOT / "tmp" / "figma-export"
 ASSETS = ROOT / "docs" / "assets"
 DOCS = ROOT / "docs"
 ARCHIVE = ROOT / "archive" / "assets"
-# Three Page 6 Monument cards have small manual x offsets.
+# Three Monument cards have small manual x offsets.
 CARD_X_OFFSETS = {"monuments": {26: 4, 27: 4, 28: 8}}
 
 
@@ -165,28 +165,28 @@ def individual_sheet(name: str, count: int, columns: int, rows: int,
 def main() -> None:
     DOCS.mkdir(exist_ok=True)
     publish = Publisher()
-    catalog = {"source": "Figma Page 6 Game components slice 663:2418", "boards": [],
-               "cards": [], "references": [], "decks": [], "tokens": []}
+    catalog = {"source": "Figma Page 7 Game components slice 688:2058", "boards": [],
+               "cards": [], "references": [], "decks": [], "dice": [], "tokens": []}
 
     for slug, title, figma_id in [
-        ("board-main", "Main board", "663:2534"),
+        ("board-main", "Main board", "688:2174"),
     ]:
         catalog["boards"].append({"title": title, "figmaId": figma_id,
                                    **publish(load(slug), "boards", slug)})
 
     for slug, title, figma_id in [
-        ("card-action-guide", "Action Guide", "663:686"),
-        ("card-region-bonus-guide", "Region Bonus Guide", "663:736"),
+        ("card-action-guide", "Action Guide", "688:780"),
+        ("card-region-bonus-guide", "Region Bonus Guide", "688:830"),
     ]:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
 
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "663:1580", 30, 6, (0, 0), (482, 680),
+        ("monuments", "monuments", "Monuments", "688:1220", 30, 6, (0, 0), (482, 680),
          (442, 640), 6, 5, "back-monument", 0),
-        ("objectives", "objectives", "Objectives", "663:767", 18, 6, (196, 140), (420, 551),
+        ("objectives", "objectives", "Objectives", "688:861", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "663:2266", 19, 4, (0, 0), (492, 734),
+        ("specials", "specials", "Specials", "688:1906", 19, 4, (0, 0), (492, 734),
          (443, 704), 5, 4, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
@@ -205,21 +205,30 @@ def main() -> None:
                                   **packed, "face": face, "back": back_asset})
 
     action_tiles = [
-        ("action-tile-1", "Build 4", "663:652", "page6-tile-652"),
-        ("action-tile-2", "Region Bonus", "663:683", "page6-tile-683"),
-        ("action-tile-3", "Build 3 — Blue", "663:508", "page6-tile-508"),
-        ("action-tile-6", "Action Upgrade +2", "663:677", "page6-tile-677"),
-        ("action-tile-7", "Build 3", "663:486", "page6-tile-486"),
-        ("action-tile-9", "Move — Blue Yellow Gray", "663:574", "page6-tile-574"),
-        ("action-tile-11", "Build 3 — Gray", "663:530", "page6-tile-530"),
-        ("action-tile-12", "Build 3 — Red", "663:552", "page6-tile-552"),
-        ("action-tile-13", "Move — Blue Yellow", "663:600", "page6-tile-600"),
-        ("action-tile-14", "Move — Yellow Red", "663:626", "page6-tile-626"),
+        ("action-tile-1", "Build 4", "688:752", "page7-tile-752"),
+        ("action-tile-2", "Region Bonus", "688:777", "page7-tile-777"),
+        ("action-tile-3", "Build 3 — Blue", "688:608", "page7-tile-608"),
+        ("action-tile-6", "Action Upgrade +2", "688:774", "page7-tile-774"),
+        ("action-tile-7", "Build 3", "688:586", "page7-tile-586"),
+        ("action-tile-9", "Move — Blue Yellow Gray", "688:674", "page7-tile-674"),
+        ("action-tile-11", "Build 3 — Gray", "688:630", "page7-tile-630"),
+        ("action-tile-12", "Build 3 — Red", "688:652", "page7-tile-652"),
+        ("action-tile-13", "Move — Blue Yellow", "688:700", "page7-tile-700"),
+        ("action-tile-14", "Move — Yellow Red", "688:726", "page7-tile-726"),
     ]
     for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,
                                   "figmaId": figma_id,
                                   **publish(load(source), "tokens", slug)})
+
+    for slug, title, figma_id in [
+        ("dice-1", "Dice 1", "688:2775"),
+        ("dice-2", "Dice 2", "688:2809"),
+        ("dice-3", "Dice 3", "688:2792"),
+        ("dice-4", "Dice 4", "688:2826"),
+    ]:
+        catalog["dice"].append({"title": title, "figmaId": figma_id,
+                                **publish(load(slug), "dice", slug)})
 
     retired = publish.retire_unlisted()
 
@@ -235,7 +244,8 @@ def main() -> None:
     index.write_text(html, encoding="utf-8")
     print(f"Built {len(catalog['decks'])} decks, {len(catalog['boards'])} boards, "
           f"{len(catalog['cards'])} cards, {len(catalog['references'])} references, "
-          f"{len(catalog['tokens'])} tokens; retired {len(retired)} old images")
+          f"{len(catalog['dice'])} dice, {len(catalog['tokens'])} tokens; "
+          f"retired {len(retired)} old images")
 
 
 if __name__ == "__main__":
