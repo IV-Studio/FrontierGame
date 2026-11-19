@@ -7,7 +7,7 @@
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 4096,
       "height": 2960,
-      "revision": "363cb8f324"
+      "revision": "a9be4806a7"
     }
   ],
   "cards": [
@@ -42,7 +42,7 @@
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 2652,
         "height": 3200,
-        "revision": "42727ccd92"
+        "revision": "01740eb233"
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
@@ -353,7 +353,7 @@
       "path": "assets/actions-branched/branched-action-08.png",
       "width": 257,
       "height": 257,
-      "revision": "d65e931684"
+      "revision": "5b6d581b9f"
     },
     {
       "title": "Branched Action 09",
@@ -361,7 +361,7 @@
       "path": "assets/actions-branched/branched-action-09.png",
       "width": 257,
       "height": 257,
-      "revision": "5d0a4b12f9"
+      "revision": "23c284f89a"
     },
     {
       "title": "Branched Action 10",
@@ -369,7 +369,7 @@
       "path": "assets/actions-branched/branched-action-10.png",
       "width": 257,
       "height": 257,
-      "revision": "b97c40a193"
+      "revision": "5e2899d445"
     },
     {
       "title": "Branched Action 11",
@@ -377,7 +377,7 @@
       "path": "assets/actions-branched/branched-action-11.png",
       "width": 257,
       "height": 257,
-      "revision": "d5519db779"
+      "revision": "f6f303f325"
     },
     {
       "title": "Branched Action 12",
@@ -385,7 +385,7 @@
       "path": "assets/actions-branched/branched-action-12.png",
       "width": 257,
       "height": 257,
-      "revision": "af16a418fe"
+      "revision": "b640332132"
     },
     {
       "title": "Branched Action 13",
@@ -393,7 +393,7 @@
       "path": "assets/actions-branched/branched-action-13.png",
       "width": 257,
       "height": 257,
-      "revision": "d9acf92bf3"
+      "revision": "4b1bbddfab"
     },
     {
       "title": "Branched Action 14",
@@ -401,7 +401,7 @@
       "path": "assets/actions-branched/branched-action-14.png",
       "width": 257,
       "height": 257,
-      "revision": "3cfc820ee0"
+      "revision": "03b3804309"
     }
   ]
 }
