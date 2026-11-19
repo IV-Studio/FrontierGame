@@ -166,7 +166,8 @@ def main() -> None:
     DOCS.mkdir(exist_ok=True)
     publish = Publisher()
     catalog = {"source": "Figma Page 7 Game components slice 688:2058", "boards": [],
-               "cards": [], "references": [], "decks": [], "dice": [], "tokens": []}
+               "cards": [], "references": [], "decks": [], "dice": [], "tokens": [],
+               "branchedActions": []}
 
     for slug, title, figma_id in [
         ("board-main", "Main board", "688:2174"),
@@ -186,8 +187,8 @@ def main() -> None:
          (442, 640), 6, 5, "back-monument", 0),
         ("objectives", "objectives", "Objectives", "688:861", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "688:1906", 19, 4, (0, 0), (492, 734),
-         (443, 704), 5, 4, "back-special", 0),
+        ("specials", "specials", "Specials", "688:1906", 18, 4, (0, 0), (492, 734),
+         (443, 704), 6, 3, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
          card_size, columns, rows, back_slug, start) in deck_specs:
@@ -240,6 +241,14 @@ def main() -> None:
         catalog["dice"].append({"title": title, "figmaId": figma_id,
                                 **publish(load(slug), "dice", slug)})
 
+    branched_ids = ["3444", "3450", "3456", "3461", "3478", "3488", "3499",
+                    "3502", "3507", "3512", "3519", "3521", "3523", "3539"]
+    for index, node_id in enumerate(branched_ids, start=1):
+        slug = f"branched-action-{index:02d}"
+        catalog["branchedActions"].append({
+            "title": f"Branched Action {index:02d}", "figmaId": f"703:{node_id}",
+            **publish(load(slug), "actions-branched", slug)})
+
     retired = publish.retire_unlisted()
 
     manifest = json.dumps(catalog, indent=2, ensure_ascii=False)
@@ -254,7 +263,8 @@ def main() -> None:
     index.write_text(html, encoding="utf-8")
     print(f"Built {len(catalog['decks'])} decks, {len(catalog['boards'])} boards, "
           f"{len(catalog['cards'])} cards, {len(catalog['references'])} references, "
-          f"{len(catalog['dice'])} dice, {len(catalog['tokens'])} tokens; "
+          f"{len(catalog['dice'])} dice, {len(catalog['tokens'])} tokens, "
+          f"{len(catalog['branchedActions'])} branched actions; "
           f"retired {len(retired)} old images")
 
 

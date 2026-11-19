@@ -7,7 +7,7 @@
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 4096,
       "height": 2960,
-      "revision": "50230d0bb0"
+      "revision": "363cb8f324"
     }
   ],
   "cards": [
@@ -42,7 +42,7 @@
         "path": "assets/decks/monuments-faces-d44fdccb0e.png",
         "width": 2652,
         "height": 3200,
-        "revision": "47f2ccde81"
+        "revision": "42727ccd92"
       },
       "back": {
         "path": "assets/decks/monuments-back-a65fba90e2.png",
@@ -75,16 +75,16 @@
     {
       "title": "Specials",
       "figmaId": "688:1906",
-      "count": 19,
-      "columns": 5,
-      "rows": 4,
+      "count": 18,
+      "columns": 6,
+      "rows": 3,
       "cardWidth": 443,
       "cardHeight": 704,
       "face": {
         "path": "assets/decks/specials-faces-adc1172863.png",
-        "width": 2215,
-        "height": 2816,
-        "revision": "25ad4c82e8"
+        "width": 2658,
+        "height": 2112,
+        "revision": "d1206730b8"
       },
       "back": {
         "path": "assets/decks/specials-back-0b946676e3.png",
@@ -288,6 +288,120 @@
       "width": 427,
       "height": 427,
       "revision": "d6157b7006"
+    }
+  ],
+  "branchedActions": [
+    {
+      "title": "Branched Action 01",
+      "figmaId": "703:3444",
+      "path": "assets/actions-branched/branched-action-01.png",
+      "width": 257,
+      "height": 257,
+      "revision": "9c92650da3"
+    },
+    {
+      "title": "Branched Action 02",
+      "figmaId": "703:3450",
+      "path": "assets/actions-branched/branched-action-02.png",
+      "width": 257,
+      "height": 257,
+      "revision": "f7ab011e00"
+    },
+    {
+      "title": "Branched Action 03",
+      "figmaId": "703:3456",
+      "path": "assets/actions-branched/branched-action-03.png",
+      "width": 257,
+      "height": 257,
+      "revision": "8cb54994f9"
+    },
+    {
+      "title": "Branched Action 04",
+      "figmaId": "703:3461",
+      "path": "assets/actions-branched/branched-action-04.png",
+      "width": 257,
+      "height": 257,
+      "revision": "b8f108c402"
+    },
+    {
+      "title": "Branched Action 05",
+      "figmaId": "703:3478",
+      "path": "assets/actions-branched/branched-action-05.png",
+      "width": 257,
+      "height": 257,
+      "revision": "c9d400ee30"
+    },
+    {
+      "title": "Branched Action 06",
+      "figmaId": "703:3488",
+      "path": "assets/actions-branched/branched-action-06.png",
+      "width": 257,
+      "height": 257,
+      "revision": "0190961b8b"
+    },
+    {
+      "title": "Branched Action 07",
+      "figmaId": "703:3499",
+      "path": "assets/actions-branched/branched-action-07.png",
+      "width": 257,
+      "height": 257,
+      "revision": "32ae4580e2"
+    },
+    {
+      "title": "Branched Action 08",
+      "figmaId": "703:3502",
+      "path": "assets/actions-branched/branched-action-08.png",
+      "width": 257,
+      "height": 257,
+      "revision": "d65e931684"
+    },
+    {
+      "title": "Branched Action 09",
+      "figmaId": "703:3507",
+      "path": "assets/actions-branched/branched-action-09.png",
+      "width": 257,
+      "height": 257,
+      "revision": "5d0a4b12f9"
+    },
+    {
+      "title": "Branched Action 10",
+      "figmaId": "703:3512",
+      "path": "assets/actions-branched/branched-action-10.png",
+      "width": 257,
+      "height": 257,
+      "revision": "b97c40a193"
+    },
+    {
+      "title": "Branched Action 11",
+      "figmaId": "703:3519",
+      "path": "assets/actions-branched/branched-action-11.png",
+      "width": 257,
+      "height": 257,
+      "revision": "d5519db779"
+    },
+    {
+      "title": "Branched Action 12",
+      "figmaId": "703:3521",
+      "path": "assets/actions-branched/branched-action-12.png",
+      "width": 257,
+      "height": 257,
+      "revision": "af16a418fe"
+    },
+    {
+      "title": "Branched Action 13",
+      "figmaId": "703:3523",
+      "path": "assets/actions-branched/branched-action-13.png",
+      "width": 257,
+      "height": 257,
+      "revision": "d9acf92bf3"
+    },
+    {
+      "title": "Branched Action 14",
+      "figmaId": "703:3539",
+      "path": "assets/actions-branched/branched-action-14.png",
+      "width": 257,
+      "height": 257,
+      "revision": "3cfc820ee0"
     }
   ]
 }
