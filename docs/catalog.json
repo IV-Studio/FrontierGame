@@ -288,6 +288,102 @@
       "width": 427,
       "height": 427,
       "revision": "d6157b7006"
+    },
+    {
+      "title": "Build 3 — Any Region",
+      "figmaId": "718:3057",
+      "path": "assets/tokens/action-tile-15.png",
+      "width": 426,
+      "height": 426,
+      "revision": "009c1c159a"
+    },
+    {
+      "title": "Build 4 — Any Region",
+      "figmaId": "718:3079",
+      "path": "assets/tokens/action-tile-16.png",
+      "width": 426,
+      "height": 426,
+      "revision": "189c4761b0"
+    },
+    {
+      "title": "Build 5 — Any Region",
+      "figmaId": "718:3101",
+      "path": "assets/tokens/action-tile-17.png",
+      "width": 426,
+      "height": 426,
+      "revision": "8eb8107ee7"
+    },
+    {
+      "title": "Move — Gray",
+      "figmaId": "718:3123",
+      "path": "assets/tokens/action-tile-18.png",
+      "width": 427,
+      "height": 427,
+      "revision": "e1906825de"
+    },
+    {
+      "title": "Move — Gray Red",
+      "figmaId": "718:3149",
+      "path": "assets/tokens/action-tile-19.png",
+      "width": 427,
+      "height": 427,
+      "revision": "dc299d3083"
+    },
+    {
+      "title": "Move — Blue Gray Red",
+      "figmaId": "718:3175",
+      "path": "assets/tokens/action-tile-20.png",
+      "width": 427,
+      "height": 427,
+      "revision": "66026b5ac0"
+    },
+    {
+      "title": "Action Upgrade +2 — Round",
+      "figmaId": "718:3201",
+      "path": "assets/tokens/action-tile-21.png",
+      "width": 426,
+      "height": 426,
+      "revision": "d2a8f29a2f"
+    },
+    {
+      "title": "Action Upgrade +3 — Round",
+      "figmaId": "721:3220",
+      "path": "assets/tokens/action-tile-22.png",
+      "width": 426,
+      "height": 426,
+      "revision": "b3ea8f16ee"
+    },
+    {
+      "title": "Action Upgrade +1 — Round",
+      "figmaId": "721:3217",
+      "path": "assets/tokens/action-tile-23.png",
+      "width": 426,
+      "height": 426,
+      "revision": "57add3bbdf"
+    },
+    {
+      "title": "Region Bonus +1",
+      "figmaId": "718:3204",
+      "path": "assets/tokens/action-tile-24.png",
+      "width": 426,
+      "height": 426,
+      "revision": "88621d91f4"
+    },
+    {
+      "title": "Region Bonus +2",
+      "figmaId": "721:3207",
+      "path": "assets/tokens/action-tile-25.png",
+      "width": 426,
+      "height": 426,
+      "revision": "f2957eec6b"
+    },
+    {
+      "title": "Region Bonus +3",
+      "figmaId": "721:3210",
+      "path": "assets/tokens/action-tile-26.png",
+      "width": 426,
+      "height": 426,
+      "revision": "9e2ec791fb"
     }
   ],
   "branchedActions": [

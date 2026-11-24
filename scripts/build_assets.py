@@ -216,6 +216,18 @@ def main() -> None:
         ("action-tile-12", "Build 3 — Red", "714:696", "page8-tile-696"),
         ("action-tile-13", "Move — Blue Yellow", "714:744", "page8-tile-744"),
         ("action-tile-14", "Move — Yellow Red", "714:770", "page8-tile-770"),
+        ("action-tile-15", "Build 3 — Any Region", "718:3057", "page8-tile-718-3057"),
+        ("action-tile-16", "Build 4 — Any Region", "718:3079", "page8-tile-718-3079"),
+        ("action-tile-17", "Build 5 — Any Region", "718:3101", "page8-tile-718-3101"),
+        ("action-tile-18", "Move — Gray", "718:3123", "page8-tile-718-3123"),
+        ("action-tile-19", "Move — Gray Red", "718:3149", "page8-tile-718-3149"),
+        ("action-tile-20", "Move — Blue Gray Red", "718:3175", "page8-tile-718-3175"),
+        ("action-tile-21", "Action Upgrade +2 — Round", "718:3201", "page8-tile-718-3201"),
+        ("action-tile-22", "Action Upgrade +3 — Round", "721:3220", "page8-tile-721-3220"),
+        ("action-tile-23", "Action Upgrade +1 — Round", "721:3217", "page8-tile-721-3217"),
+        ("action-tile-24", "Region Bonus +1", "718:3204", "page8-tile-718-3204"),
+        ("action-tile-25", "Region Bonus +2", "721:3207", "page8-tile-721-3207"),
+        ("action-tile-26", "Region Bonus +3", "721:3210", "page8-tile-721-3210"),
     ]
     for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,

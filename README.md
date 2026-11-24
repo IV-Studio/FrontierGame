@@ -12,7 +12,7 @@ Current export:
 
 Supplemental dice and branched actions remain from Page 7. Towered objective sets of 2, 3, 4, and 5 award 3, 5, 8, and 12 VP. The monument deck uses the Page 7 set copied onto Page 8.
 
-There is one main board, two standalone guide cards, fourteen dice textures, ten action tiles, and fourteen branched actions. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS. Existing Special decks need Width 6, Height 4, and Number 19 after this update.
+There is one main board, two standalone guide cards, fourteen dice textures, twenty-two action tiles, and fourteen branched actions. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS. Existing Special decks need Width 6, Height 4, and Number 19 after this update.
 
 ## Refreshing the exports
 
