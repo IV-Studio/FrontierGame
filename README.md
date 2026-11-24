@@ -1,6 +1,6 @@
 # Frontier Tabletop Simulator assets
 
-The [Page 7 Game components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=688-2058) defines the playable export set. The static catalog is in `docs/`; GitHub Pages publishes that folder. It provides direct PNG links for Tabletop Simulator and deck import settings.
+The [Page 8 Game components slice in Figma](https://www.figma.com/design/Pe6o98Z2YYYgNB8kH33Pgl/Frontier?node-id=714-2102) defines the playable export set. The static catalog is in `docs/`; GitHub Pages publishes that folder. It provides direct PNG links for Tabletop Simulator and deck import settings.
 
 Current export:
 
@@ -8,9 +8,11 @@ Current export:
 | --- | ---: | ---: | ---: | --- |
 | Monuments | 30 | 6 | 5 | Monument card back |
 | Objectives | 18 | 6 | 3 | Objective card back |
-| Specials | 18 | 6 | 3 | Special Card back |
+| Specials | 19 | 6 | 4 | Special Card back |
 
-There is one main board, two standalone guide cards, fourteen dice textures, ten action tiles, and fourteen branched actions. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS. Existing Special decks need Width 6, Height 3, and Number 18 after this update.
+Supplemental dice and branched actions remain from Page 7. Towered objective sets of 2, 3, 4, and 5 award 3, 5, 8, and 12 VP. The monument deck uses the Page 7 set copied onto Page 8.
+
+There is one main board, two standalone guide cards, fourteen dice textures, ten action tiles, and fourteen branched actions. Each deck sheet has no spacing between card bounds. Set **Back is Hidden** on when importing a deck into TTS. Existing Special decks need Width 6, Height 4, and Number 19 after this update.
 
 ## Refreshing the exports
 

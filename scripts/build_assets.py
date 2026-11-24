@@ -165,30 +165,30 @@ def individual_sheet(name: str, count: int, columns: int, rows: int,
 def main() -> None:
     DOCS.mkdir(exist_ok=True)
     publish = Publisher()
-    catalog = {"source": "Figma Page 7 Game components slice 688:2058", "boards": [],
+    catalog = {"source": "Figma Page 8 Game components slice 714:2102; supplemental dice and branched actions from Page 7", "boards": [],
                "cards": [], "references": [], "decks": [], "dice": [], "tokens": [],
                "branchedActions": []}
 
     for slug, title, figma_id in [
-        ("board-main", "Main board", "688:2174"),
+        ("board-main", "Main board", "714:2218"),
     ]:
         catalog["boards"].append({"title": title, "figmaId": figma_id,
                                    **publish(load(slug), "boards", slug)})
 
     for slug, title, figma_id in [
-        ("card-action-guide", "Action Guide", "688:780"),
-        ("card-region-bonus-guide", "Region Bonus Guide", "688:830"),
+        ("card-action-guide", "Action Guide", "714:824"),
+        ("card-region-bonus-guide", "Region Bonus Guide", "714:874"),
     ]:
         catalog["cards"].append({"title": title, "figmaId": figma_id,
                                   **publish(load(slug), "cards", slug)})
 
     deck_specs = [
-        ("monuments", "monuments", "Monuments", "688:1220", 30, 6, (0, 0), (482, 680),
+        ("monuments", "monuments", "Monuments", "715:3026", 30, 6, (0, 0), (482, 680),
          (442, 640), 6, 5, "back-monument", 0),
-        ("objectives", "objectives", "Objectives", "688:861", 18, 6, (196, 140), (420, 551),
+        ("objectives", "objectives", "Objectives", "714:905", 18, 6, (196, 140), (420, 551),
          (388, 519), 6, 3, "back-objective", 0),
-        ("specials", "specials", "Specials", "688:1906", 18, 4, (0, 0), (492, 734),
-         (443, 704), 6, 3, "back-special", 0),
+        ("specials", "specials", "Specials", "714:1950", 19, 4, (0, 0), (492, 734),
+         (443, 704), 6, 4, "back-special", 0),
     ]
     for (slug, asset_slug, title, figma_id, count, source_columns, origin, stride,
          card_size, columns, rows, back_slug, start) in deck_specs:
@@ -206,16 +206,16 @@ def main() -> None:
                                   **packed, "face": face, "back": back_asset})
 
     action_tiles = [
-        ("action-tile-1", "Build 4", "688:752", "page7-tile-752"),
-        ("action-tile-2", "Region Bonus", "688:777", "page7-tile-777"),
-        ("action-tile-3", "Build 3 — Blue", "688:608", "page7-tile-608"),
-        ("action-tile-6", "Action Upgrade +2", "688:774", "page7-tile-774"),
-        ("action-tile-7", "Build 3", "688:586", "page7-tile-586"),
-        ("action-tile-9", "Move — Blue Yellow Gray", "688:674", "page7-tile-674"),
-        ("action-tile-11", "Build 3 — Gray", "688:630", "page7-tile-630"),
-        ("action-tile-12", "Build 3 — Red", "688:652", "page7-tile-652"),
-        ("action-tile-13", "Move — Blue Yellow", "688:700", "page7-tile-700"),
-        ("action-tile-14", "Move — Yellow Red", "688:726", "page7-tile-726"),
+        ("action-tile-1", "Build 4", "714:796", "page8-tile-796"),
+        ("action-tile-2", "Region Bonus", "714:821", "page8-tile-821"),
+        ("action-tile-3", "Build 3 — Blue", "714:652", "page8-tile-652"),
+        ("action-tile-6", "Action Upgrade +2", "714:818", "page8-tile-818"),
+        ("action-tile-7", "Build 3", "714:630", "page8-tile-630"),
+        ("action-tile-9", "Move — Blue Yellow Gray", "714:718", "page8-tile-718"),
+        ("action-tile-11", "Build 3 — Gray", "714:674", "page8-tile-674"),
+        ("action-tile-12", "Build 3 — Red", "714:696", "page8-tile-696"),
+        ("action-tile-13", "Move — Blue Yellow", "714:744", "page8-tile-744"),
+        ("action-tile-14", "Move — Yellow Red", "714:770", "page8-tile-770"),
     ]
     for slug, title, figma_id, source in action_tiles:
         catalog["tokens"].append({"title": title,
@@ -223,10 +223,10 @@ def main() -> None:
                                   **publish(load(source), "tokens", slug)})
 
     for slug, title, figma_id in [
-        ("dice-1", "Dice 1", "688:2775"),
-        ("dice-2", "Dice 2", "688:2809"),
-        ("dice-3", "Dice 3", "688:2792"),
-        ("dice-4", "Dice 4", "688:2826"),
+        ("dice-1", "Dice 1", "714:2819"),
+        ("dice-2", "Dice 2", "714:2853"),
+        ("dice-3", "Dice 3", "714:2836"),
+        ("dice-4", "Dice 4", "714:2870"),
         ("dice-11", "Dice 11", "697:2993"),
         ("dice-22", "Dice 22", "697:3173"),
         ("dice-33", "Dice 33", "697:3193"),

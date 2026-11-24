@@ -1,19 +1,19 @@
 {
-  "source": "Figma Page 7 Game components slice 688:2058",
+  "source": "Figma Page 8 Game components slice 714:2102; supplemental dice and branched actions from Page 7",
   "boards": [
     {
       "title": "Main board",
-      "figmaId": "688:2174",
+      "figmaId": "714:2218",
       "path": "assets/boards/board-main-e46ceed54f.png",
       "width": 4096,
       "height": 2960,
-      "revision": "a9be4806a7"
+      "revision": "f3d58f7157"
     }
   ],
   "cards": [
     {
       "title": "Action Guide",
-      "figmaId": "688:780",
+      "figmaId": "714:824",
       "path": "assets/cards/card-action-guide-6323e6fee4.png",
       "width": 506,
       "height": 729,
@@ -21,7 +21,7 @@
     },
     {
       "title": "Region Bonus Guide",
-      "figmaId": "688:830",
+      "figmaId": "714:874",
       "path": "assets/cards/card-region-bonus-guide-800eb32bd9.png",
       "width": 759,
       "height": 1098,
@@ -32,7 +32,7 @@
   "decks": [
     {
       "title": "Monuments",
-      "figmaId": "688:1220",
+      "figmaId": "715:3026",
       "count": 30,
       "columns": 6,
       "rows": 5,
@@ -53,7 +53,7 @@
     },
     {
       "title": "Objectives",
-      "figmaId": "688:861",
+      "figmaId": "714:905",
       "count": 18,
       "columns": 6,
       "rows": 3,
@@ -63,7 +63,7 @@
         "path": "assets/decks/objectives-faces-4d91a50427.png",
         "width": 2328,
         "height": 1557,
-        "revision": "c136cf96fc"
+        "revision": "32e56861a8"
       },
       "back": {
         "path": "assets/decks/objectives-back-c08c78cc67.png",
@@ -74,17 +74,17 @@
     },
     {
       "title": "Specials",
-      "figmaId": "688:1906",
-      "count": 18,
+      "figmaId": "714:1950",
+      "count": 19,
       "columns": 6,
-      "rows": 3,
+      "rows": 4,
       "cardWidth": 443,
       "cardHeight": 704,
       "face": {
         "path": "assets/decks/specials-faces-adc1172863.png",
         "width": 2658,
-        "height": 2112,
-        "revision": "d1206730b8"
+        "height": 2816,
+        "revision": "3d1eaaf607"
       },
       "back": {
         "path": "assets/decks/specials-back-0b946676e3.png",
@@ -97,35 +97,35 @@
   "dice": [
     {
       "title": "Dice 1",
-      "figmaId": "688:2775",
+      "figmaId": "714:2819",
       "path": "assets/dice/dice-1.png",
       "width": 1503,
       "height": 1503,
-      "revision": "f6e7a68519"
+      "revision": "b23382c1e4"
     },
     {
       "title": "Dice 2",
-      "figmaId": "688:2809",
+      "figmaId": "714:2853",
       "path": "assets/dice/dice-2.png",
       "width": 1503,
       "height": 1503,
-      "revision": "1b0198594f"
+      "revision": "8b0fe6a44d"
     },
     {
       "title": "Dice 3",
-      "figmaId": "688:2792",
+      "figmaId": "714:2836",
       "path": "assets/dice/dice-3.png",
       "width": 1503,
       "height": 1503,
-      "revision": "d3b4453c02"
+      "revision": "05e558f09b"
     },
     {
       "title": "Dice 4",
-      "figmaId": "688:2826",
+      "figmaId": "714:2870",
       "path": "assets/dice/dice-4.png",
       "width": 1503,
       "height": 1503,
-      "revision": "ac4b4e499b"
+      "revision": "f71669f88a"
     },
     {
       "title": "Dice 11",
@@ -211,7 +211,7 @@
   "tokens": [
     {
       "title": "Build 4",
-      "figmaId": "688:752",
+      "figmaId": "714:796",
       "path": "assets/tokens/action-tile-1-fb100c9aa5.png",
       "width": 426,
       "height": 426,
@@ -219,7 +219,7 @@
     },
     {
       "title": "Region Bonus",
-      "figmaId": "688:777",
+      "figmaId": "714:821",
       "path": "assets/tokens/action-tile-2-7107aa55c8.png",
       "width": 426,
       "height": 426,
@@ -227,7 +227,7 @@
     },
     {
       "title": "Build 3 — Blue",
-      "figmaId": "688:608",
+      "figmaId": "714:652",
       "path": "assets/tokens/action-tile-3.png",
       "width": 427,
       "height": 427,
@@ -235,7 +235,7 @@
     },
     {
       "title": "Action Upgrade +2",
-      "figmaId": "688:774",
+      "figmaId": "714:818",
       "path": "assets/tokens/action-tile-6-813e8438d5.png",
       "width": 426,
       "height": 426,
@@ -243,7 +243,7 @@
     },
     {
       "title": "Build 3",
-      "figmaId": "688:586",
+      "figmaId": "714:630",
       "path": "assets/tokens/action-tile-7-7d3d7a7703.png",
       "width": 426,
       "height": 426,
@@ -251,7 +251,7 @@
     },
     {
       "title": "Move — Blue Yellow Gray",
-      "figmaId": "688:674",
+      "figmaId": "714:718",
       "path": "assets/tokens/action-tile-9.png",
       "width": 427,
       "height": 427,
@@ -259,7 +259,7 @@
     },
     {
       "title": "Build 3 — Gray",
-      "figmaId": "688:630",
+      "figmaId": "714:674",
       "path": "assets/tokens/action-tile-11.png",
       "width": 427,
       "height": 427,
@@ -267,7 +267,7 @@
     },
     {
       "title": "Build 3 — Red",
-      "figmaId": "688:652",
+      "figmaId": "714:696",
       "path": "assets/tokens/action-tile-12.png",
       "width": 427,
       "height": 427,
@@ -275,7 +275,7 @@
     },
     {
       "title": "Move — Blue Yellow",
-      "figmaId": "688:700",
+      "figmaId": "714:744",
       "path": "assets/tokens/action-tile-13.png",
       "width": 427,
       "height": 427,
@@ -283,7 +283,7 @@
     },
     {
       "title": "Move — Yellow Red",
-      "figmaId": "688:726",
+      "figmaId": "714:770",
       "path": "assets/tokens/action-tile-14.png",
       "width": 427,
       "height": 427,
